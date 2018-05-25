@@ -11,19 +11,19 @@
   <defs>
     <linearGradient id="gradient">
       <stop
-         style="stop-color:#000000;stop-opacity:0.47;"
-         offset="0.21" />
+         style="stop-color:#003cff;stop-opacity:0.88;"
+         offset="0" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.47;"
-         offset="0.79" />
+         style="stop-color:#003cff;stop-opacity:0;"
+         offset="1" />
     </linearGradient>
     <linearGradient
        xlink:href="#gradient"
        id="grad"
-       x1="1184"
-       y1="577"
-       x2="17"
-       y2="23"
+       x1="1200"
+       y1="0"
+       x2="0"
+       y2="0"
        gradientUnits="userSpaceOnUse" />
     <filter id="grayscale">
       <feColorMatrix
@@ -32,44 +32,55 @@
                  0.6 0.3 0.1 0 0
                  0 0 0 1 0 " />
     </filter>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="round_corner">
+      <rect
+         style="fill:#ffffff"
+         width="1200"
+         height="600"
+         x="0"
+         y="0"
+         ry="50" />
+    </mask>
   </defs>
   <image
      x="0"
      y="0"
      style="filter:url(#grayscale)"
+     mask="url(#round_corner)"
      xlink:href="%IMAGE%"
      preserveAspectRatio="xMidYMid slice"
-     height="600"
-     width="1200" />
+     width="1200"
+     height="600" />
   <rect
      style="fill:url(#grad)"
-     width="1167"
-     height="554"
-     x="17"
-     y="23"
-     ry="25" />
+     width="1200"
+     height="600"
+     x="0"
+     y="0"
+     ry="50" />
   <rect
-     style="opacity:0.6;fill:#f30017"
-     width="1167"
-     height="554"
-     x="17"
-     y="23"
-     ry="25" />
+     style="fill:#ffffff"
+     width="12"
+     height="263"
+     x="510"
+     y="169" />
   <text
      style="font-size:25px;fill:#ffffff;font-family:'ProximaNova-Regular';letter-spacing:4px"
-     x="478"
-     y="217" >
+     x="697"
+     y="82" >
      // НОВОСТИ
   </text>
-  <foreignObject x="64" y="266" width="1058" height="188">
-      <p style="text-align:center;color:#ffffff;font-size:40px;font-family:ProximaNova-Bold">
+  <foreignObject x="571" y="180" width="560" height="240">
+      <p style="line-height:60px;margin:0px;color:#ffffff;font-size:40px;font-family:ProximaNova-Bold">
       %TEXT%
       </p>
   </foreignObject>
   <text
      style="fill:#ffffff;font-size:20px;font-family:'ProximaNova-Regular';letter-spacing:4px;"
-     x="494"
-     y="551" >
+     x="698"
+     y="505" >
      POLITSTURM.COM
   </text>
 </svg>

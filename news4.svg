@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="1200px"
+   height="600px"
+   viewBox="0 0 1200 600"
+   version="1.1" >
+  <defs>
+    <linearGradient id="gradient">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.78;"
+         offset="0" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#gradient"
+       id="grad"
+       x1="1200"
+       y1="0"
+       x2="0"
+       y2="0"
+       gradientUnits="userSpaceOnUse" />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="round_corner">
+      <rect
+         style="fill:#ffffff"
+         width="1200"
+         height="600"
+         x="0"
+         y="0"
+         ry="50" />
+    </mask>
+    <filter id="blur">
+      <feGaussianBlur
+         stdDeviation="5 5"
+         result="blur" />
+    </filter>
+
+  </defs>
+  <image
+     x="0"
+     y="0"
+     style="filter:url(#blur)"
+     mask="url(#round_corner)"
+     xlink:href="%IMAGE%"
+     preserveAspectRatio="xMidYMid slice"
+     width="1200"
+     height="600" />
+  <rect
+     style="fill:url(#grad)"
+     width="1200"
+     height="600"
+     x="0"
+     y="0"
+     ry="50" />
+  <rect
+     style="fill:#ff0030"
+     width="12"
+     height="263"
+     x="510"
+     y="169" />
+  <text
+     style="font-size:25px;fill:#ff0012;font-family:'ProximaNova-Regular';letter-spacing:4px"
+     x="697"
+     y="82" >
+     //
+  </text>
+  <text
+     style="font-size:25px;fill:#ffffff;font-family:'ProximaNova-Regular';letter-spacing:4px"
+     x="720"
+     y="82" >
+     НОВОСТИ
+  </text>
+  <foreignObject x="571" y="180" width="560" height="240">
+      <p style="line-height:60px;margin:0px;color:#ffffff;font-size:40px;font-family:ProximaNova-Bold">
+      %TEXT%
+      </p>
+  </foreignObject>
+  <text
+     style="fill:#ffffff;font-size:20px;font-family:'ProximaNova-Regular';letter-spacing:4px;"
+     x="698"
+     y="505" >
+     POLITSTURM.COM
+  </text>
+</svg>
