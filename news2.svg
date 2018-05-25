@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="1200px"
+   height="600px"
+   viewBox="0 0 1200 600"
+   version="1.1" >
+  <defs>
+    <linearGradient id="gradient">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.47;"
+         offset="0.21" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.47;"
+         offset="0.79" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#gradient"
+       id="grad"
+       x1="1184"
+       y1="577"
+       x2="17"
+       y2="23"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <image
+     x="0"
+     y="0"
+     xlink:href="%IMAGE%"
+     preserveAspectRatio="xMidYMid slice"
+     height="600"
+     width="1200" />
+  <rect
+     style="fill:url(#grad)"
+     width="1167"
+     height="554"
+     x="17"
+     y="23"
+     ry="25" />
+  <rect
+     style="opacity:0.6;fill:#f30017"
+     width="1167"
+     height="554"
+     x="17"
+     y="23"
+     ry="25" />
+  <text
+     style="font-size:25px;fill:#ffffff;font-family:'ProximaNova-Regular';letter-spacing:4px"
+     x="478"
+     y="217" >
+     //
+  </text>
+  <text
+     style="font-size:25px;fill:#ffffff;font-family:'ProximaNova-Regular';letter-spacing:4px;"
+     x="508"
+     y="217" >
+     НОВОСТИ
+  </text>
+  <foreignObject x="64" y="266" width="1058" height="188">
+      <p style="text-align:center;color:#ffffff;font-size:40px;font-family:ProximaNova-Bold">
+      %TEXT%
+      </p>
+  </foreignObject>
+  <text
+     style="fill:#ffffff;font-size:20px;font-family:'ProximaNova-Regular';letter-spacing:4px;"
+     x="494"
+     y="551" >
+     POLITSTURM.COM
+  </text>
+</svg>
