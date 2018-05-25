@@ -25,10 +25,18 @@
        x2="17"
        y2="23"
        gradientUnits="userSpaceOnUse" />
+    <filter id="grayscale">
+      <feColorMatrix
+         values="0.6 0.3 0.1 0 0
+                 0.6 0.3 0.1 0 0
+                 0.6 0.3 0.1 0 0
+                 0 0 0 1 0 " />
+    </filter>
   </defs>
   <image
      x="0"
      y="0"
+     style="filter:url(#grayscale)"
      xlink:href="%IMAGE%"
      preserveAspectRatio="xMidYMid slice"
      height="600"

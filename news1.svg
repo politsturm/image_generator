@@ -30,6 +30,13 @@
          stdDeviation="5 5"
          result="blur" />
     </filter>
+    <filter id="grayscale">
+      <feColorMatrix
+         values="0.6 0.3 0.1 0 0
+                 0.6 0.3 0.1 0 0
+                 0.6 0.3 0.1 0 0
+                 0 0 0 1 0 " />
+    </filter>
     <mask
        maskUnits="userSpaceOnUse"
        id="round_corner">
@@ -50,7 +57,7 @@
      preserveAspectRatio="xMidYMid slice"
      height="1300"
      width="1300"
-     style="filter:url(#blur_bg)"
+     style="filter:url(#blur_bg);filter:url(#grayscale)"
      />
   <rect
      style="fill:#ffffff"
@@ -64,6 +71,7 @@
      y="90"
      xlink:href="%IMAGE%"
      preserveAspectRatio="xMidYMid slice"
+     style="filter:url(#grayscale)"
      height="420"
      width="420"
      mask="url(#round_corner)" />
