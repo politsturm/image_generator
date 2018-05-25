@@ -80,7 +80,7 @@
      НОВОСТИ
   </text>
   <foreignObject x="100" y="190" width="600" height="250">
-      <p class="text" style="font-size:40px;font-family:ProximaNova-Bold">
+      <p style="font-size:40px;font-family:ProximaNova-Bold">
       %TEXT%
       </p>
   </foreignObject>
