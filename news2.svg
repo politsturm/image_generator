@@ -9,22 +9,6 @@
    viewBox="0 0 1200 600"
    version="1.1" >
   <defs>
-    <linearGradient id="gradient">
-      <stop
-         style="stop-color:#000000;stop-opacity:0.47;"
-         offset="0.21" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.47;"
-         offset="0.79" />
-    </linearGradient>
-    <linearGradient
-       xlink:href="#gradient"
-       id="grad"
-       x1="1184"
-       y1="577"
-       x2="17"
-       y2="23"
-       gradientUnits="userSpaceOnUse" />
     <filter id="grayscale">
       <feColorMatrix
          values="0.6 0.3 0.1 0 0
@@ -42,7 +26,7 @@
      height="600"
      width="1200" />
   <rect
-     style="fill:url(#grad)"
+     style="fill:#f30017;mix-blend-mode:multiply"
      width="1167"
      height="554"
      x="17"
