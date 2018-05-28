@@ -4,10 +4,6 @@
     display: none;
 }
 
-button {
-    display: none;
-}
-
 @font-face {
     font-family: 'ProximaNova-Bold';
     src: url(fonts/ProximaNova-Bold.ttf);
@@ -20,16 +16,13 @@ button {
 
 </style>
 
-<button>
-</button>
-
 <?php
     $IGNORE_SSL = array(
         "ssl" => array(
             "verify_peer" => false,
             "verify_peer_name" => false,
         ),
-    );  
+    );
 
     $img_url = $_GET['url'];
     $template = $_GET['template'];
@@ -46,6 +39,10 @@ button {
 
 <br>
 <canvas id="canvas" width="1200" height="600"></canvas>
+<br>
+
+<button>Download</button>
+
 <script>
     var btn = document.querySelector('button');
     var svg = document.querySelector('svg');
@@ -91,5 +88,9 @@ button {
 
         img.src = url;
     });
-    //btn.click();
+<?php
+	if ($_GET["download"] === "on") {
+		echo "btn.click();";
+	}
+?>
 </script>
