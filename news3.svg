@@ -73,9 +73,13 @@
      // НОВОСТИ
   </text>
   <foreignObject x="571" y="180" width="560" height="240">
-      <p style="line-height:60px;margin:0px;color:#ffffff;font-size:40px;font-family:ProximaNova-Bold">
-      %TEXT%
-      </p>
+    <div style="display:table;height:240">
+      <div style="display:table-cell;height:240px;vertical-align:middle">
+        <p style="line-height:60px;margin:0px;color:#ffffff;font-size:40px;font-family:ProximaNova-Bold">
+          %TEXT%
+        </p>
+      </div>
+    </div>
   </foreignObject>
   <text
      style="fill:#ffffff;font-size:20px;font-family:'ProximaNova-Regular';letter-spacing:4px;"
