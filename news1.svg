@@ -76,19 +76,19 @@
      width="420"
      mask="url(#round_corner)" />
   <text
-     style="font-size:20px;fill:#ff0000;font-family:'ProximaNova-Regular';letter-spacing:4px"
+     style="font-size:20px;fill:#ff0000;font-family:'Proxmia Nova';letter-spacing:4px"
      x="100"
      y="136" >
      //
   </text>
   <text
-     style="font-size:20px;font-family:'ProximaNova-Regular';letter-spacing:4px;"
+     style="font-size:20px;font-family:'Proxima Nova';letter-spacing:4px;"
      x="128"
      y="136" >
      НОВОСТИ
   </text>
   <foreignObject x="100" y="190" width="600" height="250">
-      <p style="font-size:40px;font-family:ProximaNova-Bold">
+      <p style="line-height:60px;text-transform:uppercase;margin:0px;font-size:40px;font-weight:700;font-family:'Proxima Nova'">
       %TEXT%
       </p>
   </foreignObject>
@@ -100,7 +100,7 @@
      y="90"
      ry="50" />
   <text
-     style="font-size:20px;font-family:'ProximaNova-Regular';letter-spacing:4px;"
+     style="font-size:20px;font-family:'Proxima Nova';letter-spacing:4px;"
      x="420"
      y="560" >
      POLITSTURM.COM

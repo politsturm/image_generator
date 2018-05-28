@@ -3,17 +3,6 @@
 #canvas {
     display: none;
 }
-
-@font-face {
-    font-family: 'ProximaNova-Bold';
-    src: url(fonts/ProximaNova-Bold.ttf);
-}
-
-@font-face {
-    font-family: 'ProximaNova-Regular';
-    src: url(fonts/ProximaNova-Reg.ttf);
-}
-
 </style>
 
 <?php
