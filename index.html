@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 
-For correct rendering install 'Proxima Nova' font.
-You can try files from <a href="https://github.com/chrisronline/invision/tree/master/app/fonts/proxima-nova">here</a>
+<meta encoding="utf-8">
 
-<form action="gen.php">
-    Image URL:<br>
-    <input type="text" name="url" value="">
-    <br>
-    <br>
-    News text:<br>
-    <input type="text" name="text" value="">
-    <br>
-    Template name:<br>
-    <input type="radio" name="template" value="news1" checked>Template 1<br>
-    <input type="radio" name="template" value="news2">Template 2<br>
-    <input type="radio" name="template" value="news3">Template 3<br>
-    <input type="radio" name="template" value="news4">Template 4<br>
-    <input type="checkbox" name="download" value="on" checked>
-    Automatically download image<br>
-    <input type="submit" value="Submit">
-</form>
+<style>
+.main {
+	width: 600px;
+	margin: 0 auto;
+}
+</style>
+<div class="main">
+	Если шрифт на конечном изображении с засечками, установите шрифт
+	'Proxima Nova'. Можете попробовать файлы отсюда
+	<a href="https://github.com/chrisronline/invision/tree/master/app/fonts/proxima-nova">отсюда</a>.
+	<br>
+	<br>
+
+	<form action="gen.php">
+		URL изображения:<br>
+		<input type="text" name="url" value="">
+		<br>
+		<br>
+		Заголовок новости:<br>
+		<input type="text" name="text" value="">
+		<br>
+		<br>
+		Шаблон:<br>
+		<input type="radio" name="template" value="news1" checked>Диагональный градиент<br>
+		<input type="radio" name="template" value="news2">Красный прямоугольник<br>
+		<input type="radio" name="template" value="news3">Горизонтальный градиент<br>
+		<input type="radio" name="template" value="news4">Важная новость<br>
+		<br>
+		<input type="checkbox" name="download" value="on" checked>
+		Автоматически скачать изображение<br>
+		<br>
+		<input type="submit" value="Сгенерировать">
+	</form>
+</div>
