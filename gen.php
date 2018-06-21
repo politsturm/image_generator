@@ -6,24 +6,27 @@
 </style>
 
 <?php
-    $IGNORE_SSL = array(
-        "ssl" => array(
-            "verify_peer" => false,
-            "verify_peer_name" => false,
-        ),
-    );
+	$IGNORE_SSL = array(
+		"ssl" => array(
+			"verify_peer" => false,
+			"verify_peer_name" => false,
+		),
+	);
 
-    $img_url = $_GET['url'];
-    $template = $_GET['template'];
-    $text = $_GET['text'];
+	$img_url = $_GET['url'];
+	$template = $_GET['template'];
+	$text = $_GET['text'];
 
-    $data = file_get_contents($img_url, false, stream_context_create($IGNORE_SSL));
-    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+	$data = file_get_contents($img_url, false, stream_context_create($IGNORE_SSL));
+	$base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
 
-    $svg = file_get_contents("$template.svg");
-    $svg = str_replace('%IMAGE%', $base64, $svg);
-    $svg = str_replace('%TEXT%', $text, $svg);
-    echo $svg;
+	$svg = file_get_contents("$template.svg");
+	$svg = str_replace('%IMAGE%', $base64, $svg);
+	$svg = str_replace('%TEXT%', $text, $svg);
+	echo $svg;
+
+	file_put_contents('test.svg', $svg);
+	exec('convert test.svg test.png');
 ?>
 
 <br>
@@ -33,50 +36,55 @@
 <button>Download</button>
 
 <script>
-    var btn = document.querySelector('button');
-    var svg = document.querySelector('svg');
-    var canvas = document.querySelector('canvas');
+	var btn = document.querySelector('button');
+	var svg = document.querySelector('svg');
+	var canvas = document.querySelector('canvas');
 
-    function triggerDownload (imgURI) {
-        var evt = new MouseEvent('click', {
-            view: window,
-            bubbles: false,
-            cancelable: true
-        });
+	function triggerDownload (imgURI) {
+		var evt = new MouseEvent('click', {
+			view: window,
+			bubbles: false,
+			cancelable: true
+		});
 
-        var a = document.createElement('a');
-        a.setAttribute('download', 'MY_COOL_IMAGE.png');
-        a.setAttribute('href', imgURI);
-        a.setAttribute('target', '_blank');
+		var a = document.createElement('a');
+		a.setAttribute('download', 'MY_COOL_IMAGE.png');
+		a.setAttribute('href', imgURI);
+		a.setAttribute('target', '_blank');
 
-        a.dispatchEvent(evt);
-    }
+		a.dispatchEvent(evt);
+	}
 
-    btn.addEventListener('click', function () {
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
-        var data = (new XMLSerializer()).serializeToString(svg);
-        var DOMURL = window.URL || window.webkitURL || window;
+	btn.addEventListener('click', function () {
+		var canvas = document.getElementById('canvas');
+		var ctx = canvas.getContext('2d');
+		var data = (new XMLSerializer()).serializeToString(svg);
+		var DOMURL = window.URL || window.webkitURL || window;
 
-        var img = new Image();
-        var svgBlob = new Blob([data], {type:
-        'image/svg+xml;charset=utf-8'});
-        var url = DOMURL.createObjectURL(svgBlob);
+		var img = new Image();
+		img.crossOrigin = "Anonymous";
 
-        img.onload = function () {
-            ctx.drawImage(img, 0, 0);
-            DOMURL.revokeObjectURL(url);
+		if (navigator.userAgent.indexOf('Chrome') != -1) {
+			var url = 'data:image/svg+xml;charset=utf-8,' + data;
+		} else {
+			var svgBlob = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+			var url = DOMURL.createObjectURL(svgBlob);
+		}
 
-            var imgURI = canvas
-                .toDataURL('image/png')
-                .replace('image/png',
-                'image/octet-stream');
+		img.onload = function () {
+			ctx.drawImage(img, 0, 0);
+			DOMURL.revokeObjectURL(url);
 
-            triggerDownload(imgURI);
-        };
+			var imgURI = canvas
+				.toDataURL('image/png')
+				.replace('image/png',
+				'image/octet-stream');
 
-        img.src = url;
-    });
+			triggerDownload(imgURI);
+		};
+
+		img.src = url;
+	});
 <?php
 	if ($_GET["download"] === "on") {
 		echo "btn.click();";
