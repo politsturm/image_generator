@@ -44,6 +44,13 @@
          ry="50" />
     </mask>
   </defs>
+  <rect
+     x="0"
+     y="0"
+     width="1200"
+     height="600"
+     style="fill:#ffffff"
+     />
   <image
      x="0"
      y="0"
