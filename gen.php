@@ -21,8 +21,8 @@
 	$base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
 
 	$svg = file_get_contents("$template.svg");
-	$svg = str_replace('%IMAGE%', $base64, $svg);
 	$svg = str_replace('%TEXT%', $text, $svg);
+	$svg = str_replace('%IMAGE%', $base64, $svg);
 	echo $svg;
 
 	file_put_contents('test.svg', $svg);
