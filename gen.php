@@ -65,7 +65,7 @@
 		img.crossOrigin = "Anonymous";
 
 		if (navigator.userAgent.indexOf('Chrome') != -1) {
-			var url = 'data:image/svg+xml;charset=utf-8,' + data;
+			var url = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(data)));
 		} else {
 			var svgBlob = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
 			var url = DOMURL.createObjectURL(svgBlob);
