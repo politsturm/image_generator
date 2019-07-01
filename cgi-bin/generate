@@ -22,7 +22,7 @@ def generate_svg(template_name, img_url, text):
     uri = "data:{};base64,{}".format(img_type, data)
 
     template = template_name + '.svg';
-    with open(template, 'r') as f:
+    with open('data/' + template, 'r') as f:
         svg = f.read().replace('%TEXT%', text).replace('%IMAGE%', uri)
         return svg
 
@@ -37,8 +37,7 @@ def svg_to_png(svg):
 
 args = get_args()
 if args['cgi']:
-    print("Content-type: text/html")
-    #print("Content-type: image/html")
+    print('Content-type: image/svg')
     print()
 
 img_url = args['url'];

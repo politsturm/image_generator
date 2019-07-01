@@ -5,5 +5,5 @@ import json
 print("Content-type: text/json")
 print()
 
-with open('templates.json') as f:
+with open('data/templates.json') as f:
     print(f.read())
