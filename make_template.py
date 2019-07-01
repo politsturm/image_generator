@@ -92,6 +92,15 @@ def replace_text(tree, selector, content, letter_spacing, width_k=1.0):
     for tag in tags:
         parent.remove(tag)
 
+def getViewBox(viewBoxStr):
+    arr = viewBoxStr.split(' ')
+    return {
+        'x': float(arr[0]),
+        'y': float(arr[1]),
+        'width': float(arr[2]),
+        'height': float(arr[3]),
+    }
+
 def main(input_svg, output_svg):
     ET.register_namespace('', 'http://www.w3.org/2000/svg')
     ET.register_namespace('xlink', 'http://www.w3.org/1999/xlink')
@@ -103,9 +112,10 @@ def main(input_svg, output_svg):
     root = tree.getroot()
     root.attrib['width'] = '1920'
     root.attrib['height'] = '1080'
+    viewBox = getViewBox(root.attrib['viewBox'])
     for image in root.findall('.//{http://www.w3.org/2000/svg}image'):
         image.set('{http://www.w3.org/1999/xlink}href', '%IMAGE%')
-        image.set('preserveAspectRatio', 'xMidYMid slice')
+        image.attrib['width'] = str(viewBox['width'])
 
     replace_text(tree, is_news_text, '%TEXT%', letter_spacing=0.07)
     replace_text(tree, is_tag_text,  '%CITY%', letter_spacing=0.07, width_k=1.3)
