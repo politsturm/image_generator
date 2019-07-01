@@ -1,16 +1,26 @@
 var g_svg;
 
-function ajax(uri, onload) {
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', uri);
-	xhr.onload = function() {
-		if (xhr.status === 200) {
-			onload(xhr.responseText);
-		} else {
-			alert('Request failed.  Returned status of ' + xhr.status);
+async function ajax(uri) {
+	return new Promise((resolve, reject) => {
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', uri);
+		xhr.onload = function() {
+			if (xhr.status === 200) {
+				resolve(xhr.responseText);
+			} else {
+				reject(xhr.status);
+			}
 		}
-	}
-	xhr.send();
+		xhr.send();
+	});
+}
+
+async function generate_svg(url, template) {
+	var uri = 'cgi-bin/generate' +
+	    '?url=' + url +
+	    '&template=' + template;
+
+	return ajax(uri);
 }
 
 function get_current_template() {
@@ -26,7 +36,7 @@ DEFAULT_TEMPLATE = 'default'
 DEFAULT_IMG_URL = 'https://cdnb.artstation.com/p/assets/images/images/012/078/995/large/dmitry-petuhov-lenin.jpg'
 DEFAULT_TEXT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa.';
 
-function get_svg(handler) {
+async function get_svg() {
 	var img_url = document.getElementById('url').value;
 	if (img_url == '') {
 		img_url = DEFAULT_IMG_URL;
@@ -37,14 +47,11 @@ function get_svg(handler) {
 		template = DEFAULT_TEMPLATE;
 	}
 
-	var uri = 'cgi-bin/generate' +
-		'?url=' + img_url +
-		'&template=' + template;
-	ajax(uri, handler);
+	return generate_svg(img_url, template);
 }
 
 function on_svg_change() {
-	get_svg(function(svg) {
+	get_svg().then(svg => {
 		g_svg = svg;
 		on_text_change();
 	});
@@ -138,7 +145,7 @@ function createInput(name, title, checked) {
 }
 
 window.onload = function() {
-	ajax('cgi-bin/templates', function(result) {
+	ajax('cgi-bin/templates').then(result => {
 		var checked = true
 		var templates = JSON.parse(result);
 		for (var name in templates) {
