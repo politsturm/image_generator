@@ -20,11 +20,11 @@
  </defs>
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <g clip-path="url(#id0)">
-   <image height="2505.95" width="3759.84" x="695.18" y="-0" xlink:href="%IMAGE%" />
+   <image height="2505.95" preserveAspectRatio="xMidYMid slice" width="3759.84" x="695.18" y="-0" xlink:href="%IMAGE%" />
   </g>
   <polygon fill="#0136CD" fill-opacity="0.200000" points="4455.02,0 -0,0 -0,2505.95 4455.02,2505.95 " />
   <polygon fill="#E70026" points="2424.27,2505.95 -0,2505.95 -0,0 3868.44,0 " />
   <polygon fill="#980012" mask="url(#id1)" points="1459.01,2505.95 -0,2505.95 -0,0 2903.18,0 " />
   <polygon fill="#980015" mask="url(#id3)" points="-0,1533.2 -0,0 883.58,0 " />
-  <foreignObject height="1077.1999999999998" width="2590.62" x="208.21" y="834.1500000000001"><p style="font-weight:600;font-size:190.52px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2180348519840434">%TEXT%</p></foreignObject><foreignObject height="154.68" width="533.4499999999999" x="922.73" y="222.84"><p style="font-weight:bold;font-size:77.34px;font-family:'Proxima Nova Rg';color:white;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="138.76" width="764.63" x="796.01" y="2188.93"><p style="font-weight:normal;font-size:69.38px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
+  <foreignObject height="1077.1999999999998" width="2590.62" x="208.21" y="834.1500000000001"><p style="font-weight:600;font-size:190.52px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2180348519840434">%TEXT%</p></foreignObject><foreignObject height="154.68" width="693.4849999999999" x="922.73" y="222.84"><p style="font-weight:bold;font-size:77.34px;font-family:'Proxima Nova Rg';color:white;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="138.76" width="994.019" x="796.01" y="2188.93"><p style="font-weight:normal;font-size:69.38px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
 </svg>

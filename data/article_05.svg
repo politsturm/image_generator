@@ -25,25 +25,10 @@
  </defs>
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <g clip-path="url(#id0)">
-   <image clip-path="url(#id1)" height="11711.75" width="17571.06" x="-0" y="-1125.19" xlink:href="%IMAGE%" />
+   <image clip-path="url(#id1)" height="11711.75" preserveAspectRatio="xMidYMid slice" width="17571.06" x="-0" y="-1125.19" xlink:href="%IMAGE%" />
   </g>
   <path d="M1172.84 520.49l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83z" fill="#F30017" fill-opacity="0.850980" />
   <path d="M1172.84 520.49l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83z" fill="#A80011" mask="url(#id2)" />
   <path d="M16398.21 9363.23l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83z" fill="#C20013" mask="url(#id4)" />
-  <foreignObject height="4248.589999999999" width="11000" x="3199.14" y="3289.9900000000002">
-    <p style="font-weight:600;font-size:751.43px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2179976844150484">
-      %TEXT%
-    </p>
-  </foreignObject>
-  <foreignObject height="610.1" width="2103.99" x="7803.55" y="878.48">
-    <p style="font-weight:bold;font-size:305.05px;font-family:'Proxima Nova Rg';color:white;letter-spacing:0.07em">
-      %CITY%
-    </p>
-  </foreignObject>
-  <foreignObject height="547.28" width="3015.769999999999" x="7303.77" y="8633.380000000001">
-    <p style="font-weight:normal;font-size:273.64px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">
-      %SITE%
-    </p>
-  </foreignObject>
-</g>
+  <foreignObject height="4248.589999999999" width="9805.330000000002" x="3199.14" y="3289.9900000000002"><p style="font-weight:600;font-size:751.43px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2179976844150484">%TEXT%</p></foreignObject><foreignObject height="610.1" width="2735.187" x="7803.55" y="878.48"><p style="font-weight:bold;font-size:305.05px;font-family:'Proxima Nova Rg';color:white;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="547.28" width="3920.500999999999" x="7303.77" y="8633.380000000001"><p style="font-weight:normal;font-size:273.64px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
 </svg>

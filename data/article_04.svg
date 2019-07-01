@@ -10,8 +10,8 @@
  </defs>
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <g clip-path="url(#id0)">
-   <image height="5693.3" width="10121.42" x="-0" y="0" xlink:href="%IMAGE%" />
+   <image height="5693.3" preserveAspectRatio="xMidYMid slice" width="10121.42" x="-0" y="0" xlink:href="%IMAGE%" />
   </g>
   <polygon fill="url(#id1)" fill-opacity="0.901961" points="10121.42,5693.3 -0,5693.3 -0,0 10121.42,0 " />
-  <foreignObject height="2447.3200000000006" width="6775.18" x="1842.8" y="1895.12"><p style="font-weight:600;font-size:432.85px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2179969966501099">%TEXT%</p></foreignObject><foreignObject height="351.44" width="1211.9600000000007" x="4495.07" y="506.03"><p style="font-weight:bold;font-size:175.72px;font-family:'Proxima Nova Rg';color:white;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="315.26" width="1737.17" x="4207.18" y="4973.0599999999995"><p style="font-weight:normal;font-size:157.63px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
+  <foreignObject height="2447.3200000000006" width="6775.18" x="1842.8" y="1895.12"><p style="font-weight:600;font-size:432.85px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2179969966501099">%TEXT%</p></foreignObject><foreignObject height="351.44" width="1575.548000000001" x="4495.07" y="506.03"><p style="font-weight:bold;font-size:175.72px;font-family:'Proxima Nova Rg';color:white;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="315.26" width="2258.3210000000004" x="4207.18" y="4973.0599999999995"><p style="font-weight:normal;font-size:157.63px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
 </svg>

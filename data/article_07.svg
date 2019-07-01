@@ -9,9 +9,9 @@
  </defs>
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <g clip-path="url(#id0)">
-   <image clip-path="url(#id1)" height="3080.88" width="6161.77" x="-342.32" y="0" xlink:href="%IMAGE%" />
+   <image clip-path="url(#id1)" height="3080.88" preserveAspectRatio="xMidYMid slice" width="6161.77" x="-342.32" y="0" xlink:href="%IMAGE%" />
   </g>
   <polygon fill="#0136CD" fill-opacity="0.250980" points="5477.13,0 -0,0 -0,3080.88 5477.13,3080.88 " />
   <path d="M1716.17 0l3760.96 0 0 3080.88 -3313.66 0 -351.39 -347.8c-63.72,-63.07 -95.91,-140.23 -95.91,-229.89l0 -2503.2z" fill="#FEFEFE" />
-  <foreignObject height="1324.34" width="3184.97" x="2077.09" y="1025.53"><p style="font-weight:600;font-size:234.23px;font-family:'Proxima Nova Lt';color:#2B2A29;letter-spacing:0.07em;line-height:1.218033556760449">%TEXT%</p></foreignObject><foreignObject height="190.18" width="655.8499999999998" x="2955.53" y="273.95000000000005"><p style="font-weight:bold;font-size:95.09px;font-family:'Proxima Nova Rg';color:black;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="170.6" width="940.0600000000002" x="2799.74" y="2691.1299999999997"><p style="font-weight:normal;font-size:85.3px;font-family:'Proxima Nova Rg';color:#2B2A29;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
+  <foreignObject height="1324.34" width="3184.97" x="2077.09" y="1025.53"><p style="font-weight:600;font-size:234.23px;font-family:'Proxima Nova Lt';color:#2B2A29;letter-spacing:0.07em;line-height:1.218033556760449">%TEXT%</p></foreignObject><foreignObject height="190.18" width="852.6049999999998" x="2955.53" y="273.95000000000005"><p style="font-weight:bold;font-size:95.09px;font-family:'Proxima Nova Rg';color:black;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="170.6" width="1222.0780000000002" x="2799.74" y="2691.1299999999997"><p style="font-weight:normal;font-size:85.3px;font-family:'Proxima Nova Rg';color:#2B2A29;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
 </svg>
