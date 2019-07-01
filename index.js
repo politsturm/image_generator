@@ -50,11 +50,10 @@ async function get_svg() {
 	return generate_svg(img_url, template);
 }
 
-function on_svg_change() {
-	get_svg().then(svg => {
-		g_svg = svg;
-		on_text_change();
-	});
+async function on_svg_change() {
+	var svg = await get_svg();
+	g_svg = svg;
+	on_text_change();
 }
 
 function on_text_change() {
@@ -144,18 +143,18 @@ function createInput(name, title, checked) {
 	return elem;
 }
 
-window.onload = function() {
-	ajax('cgi-bin/templates').then(result => {
-		var checked = true
-		var templates = JSON.parse(result);
-		for (var name in templates) {
-			var li = createInput(name, templates[name], checked);
-			// Checked only first
-			checked = false;
+window.onload = async function() {
+	var result = await ajax('cgi-bin/templates');
+	var templates = JSON.parse(result);
+	var checked = true
+	for (var name in templates) {
+		var li = createInput(name, templates[name], checked);
+		// Checked only first
+		checked = false;
 
-			var block = document.getElementById('templates')
-			block.appendChild(li);
-		}
-	});
+		var block = document.getElementById('templates')
+		block.appendChild(li);
+	}
+
 	on_svg_change();
 }
