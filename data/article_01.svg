@@ -62,17 +62,23 @@
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer" />
   <g clip-path="url(#id0)">
-   <image height="2482.38" width="4413" x="0" y="0" xlink:href="%IMAGE%" />
+   <image height="2482.38" width="4413.12" x="1255.6" y="0" xlink:href="%IMAGE%" />
   </g>
   <polygon fill="#0136CD" fill-opacity="0.250980" points="2255.6,0 4413.12,0 4413.12,2482.38 2255.6,2482.38 " />
   <path d="M2255.6 0l-2255.6 0 0 2482.38 2255.6 0 941.48 -946.51c273.52,-274.98 267.54,-320.41 0,-589.37l-941.48 -946.51z" fill="#FEFEFE" />
-  <foreignObject x="206.26" y="800" width="2377.52" height="900">
-      <p style="font-size:188.73px;font-weight:600;font-family:'Proxima Nova'">
-      %TEXT%
-      </p>
-  </foreignObject>
-  <text fill="#010000" letter-spacing="9.5pt" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="788.53" y="2237.07">
-    POLITSTURM.COM
-  </text>
- </g>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="788.53" y="2237.07">P</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1324.09" y="2237.07">.</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="841.64" y="2237.07">O</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="906.98" y="2237.07">L</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="954.8" y="2237.07">I</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="983.99" y="2237.07">T</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1035.72" y="2237.07">S</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1088.35" y="2237.07">T</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1140.29" y="2237.07">U</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1201.17" y="2237.07">R</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1255.72" y="2237.07">M</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1352.66" y="2237.07">C</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1411.89" y="2237.07">O</text>
+  <text fill="#010000" font-family="Proxima Nova Rg" font-size="68.73px" font-weight="normal" x="1477.23" y="2237.07">M</text>
+ <foreignObject height="1067.0700000000002" width="2566.2500000000005" x="206.26" y="826.31"><p style="font-weight:600;font-size:188.73px;font-family:'Proxima Nova Lt';color:black;line-height:1.2179833624754948">%TEXT%</p></foreignObject></g>
 </svg>

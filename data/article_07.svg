@@ -69,11 +69,6 @@
   </g>
   <polygon fill="#0136CD" fill-opacity="0.250980" points="16491.51,0 -0,0 -0,9276.47 16491.51,9276.47 " />
   <path d="M5167.33 0l11324.17 0 0 9276.47 -9977.37 0 -1058.02 -1047.22c-191.86,-189.91 -288.79,-422.22 -288.79,-692.18l0 -7537.07z" fill="#FEFEFE" />
-  <foreignObject x="6300" y="3000" width="10000" height="5000">
-      <p style="color:#2b2a29;font-size:705.27px;font-weight:600;font-family:'Proxima Nova Lt'">
-      %TEXT%
-      </p>
-  </foreignObject>
   <text fill="#2B2A29" font-family="Proxima Nova Rg" font-size="256.83px" font-weight="normal" x="8429.97" y="8359.78">P</text>
   <text fill="#2B2A29" font-family="Proxima Nova Rg" font-size="256.83px" font-weight="normal" x="10431.33" y="8359.78">.</text>
   <text fill="#2B2A29" font-family="Proxima Nova Rg" font-size="256.83px" font-weight="normal" x="8628.43" y="8359.78">O</text>
@@ -88,5 +83,5 @@
   <text fill="#2B2A29" font-family="Proxima Nova Rg" font-size="256.83px" font-weight="normal" x="10538.11" y="8359.78">C</text>
   <text fill="#2B2A29" font-family="Proxima Nova Rg" font-size="256.83px" font-weight="normal" x="10759.43" y="8359.78">O</text>
   <text fill="#2B2A29" font-family="Proxima Nova Rg" font-size="256.83px" font-weight="normal" x="11003.62" y="8359.78">M</text>
- </g>
+ <foreignObject height="3987.58" width="9589.890000000001" x="6254.07" y="3087.85"><p style="font-weight:600;font-size:705.27px;font-family:'Proxima Nova Lt';color:#2B2A29;line-height:1.2179874374353088">%TEXT%</p></foreignObject></g>
 </svg>

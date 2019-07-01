@@ -81,17 +81,12 @@
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer" />
   <g clip-path="url(#id0)">
-   <image height="1968.99" width="3500.42" x="546.22" y="-0" xlink:href="%IMAGE%" />
+   <image height="1968.99" width="3500.42" x="1000" y="-0" xlink:href="%IMAGE%" />
   </g>
   <polygon fill="#0136CD" fill-opacity="0.200000" points="3500.42,0 -0,0 -0,1968.99 3500.42,1968.99 " />
   <polygon fill="url(#id1)" points="1904.81,1968.99 -0,1968.99 -0,0 3039.53,0 " />
   <polygon fill="black" mask="url(#id2)" points="1146.38,1968.99 -0,1968.99 -0,0 2281.1,0 " />
   <polygon fill="black" mask="url(#id4)" points="-0,1204.67 -0,0 694.25,0 " />
-  <foreignObject x="163.6" y="650" width="2000" height="800">
-      <p style="color:#fefefe;font-size:149.7px;font-weight:600;font-family:'Proxima Nova Lt';line-height:190px">
-      %TEXT%
-      </p>
-  </foreignObject>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="54.51px" font-weight="normal" x="625.45" y="1774.41">P</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="54.51px" font-weight="normal" x="1050.25" y="1774.41">.</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="54.51px" font-weight="normal" x="667.57" y="1774.41">O</text>
@@ -106,5 +101,5 @@
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="54.51px" font-weight="normal" x="1072.91" y="1774.41">C</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="54.51px" font-weight="normal" x="1119.89" y="1774.41">O</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="54.51px" font-weight="normal" x="1171.72" y="1774.41">M</text>
- </g>
+ <foreignObject height="846.3899999999999" width="2035.51" x="163.6" y="655.4100000000001"><p style="font-weight:600;font-size:149.7px;font-family:'Proxima Nova Lt';color:#FEFEFE;line-height:1.2179692718770878">%TEXT%</p></foreignObject></g>
 </svg>

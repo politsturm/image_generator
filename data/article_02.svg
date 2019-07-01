@@ -83,11 +83,6 @@
    <image height="3051.45" width="5424.8" x="-0" y="0" xlink:href="%IMAGE%" />
   </g>
   <polygon fill="url(#id1)" fill-opacity="0.901961" points="-0,0 5424.8,0 5424.8,3051.45 -0,3051.45 " />
-  <foreignObject x="994.22" y="1000" width="4177" height="1000">
-      <p style="color:#fefefe;font-size:231.99px;font-weight:600;font-family:'Proxima Nova Rg'">
-      %TEXT%
-      </p>
-  </foreignObject>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="84.48px" font-weight="normal" x="2254.93" y="2749.91">P</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="84.48px" font-weight="normal" x="2913.27" y="2749.91">.</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="84.48px" font-weight="normal" x="2320.22" y="2749.91">O</text>
@@ -113,5 +108,5 @@
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="87.8px" font-weight="bold" x="2850.8" y="302.53">&#1091;</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="87.8px" font-weight="bold" x="2902.58" y="302.53">&#1088;</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="87.8px" font-weight="bold" x="2960.51" y="302.53">&#1084;</text>
- </g>
+ <foreignObject height="1311.6799999999998" width="3631.2999999999993" x="994.22" y="1015.74"><p style="font-weight:600;font-size:231.99px;font-family:'Proxima Nova Lt';color:#FEFEFE;line-height:1.2180266390792704">%TEXT%</p></foreignObject></g>
 </svg>

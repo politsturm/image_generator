@@ -86,12 +86,6 @@
   <g clip-path="url(#id3)">
    <image height="2209.21" width="4418.43" x="-718.88" y="906.02" xlink:href="%IMAGE%" />
   </g>
-  <text fill="#FEFEFE" font-family="Proxima Nova Lt" font-size="" font-weight="600" x="2980.68" y="1644.28">&#1057;</text>
-  <foreignObject x="2980.68" y="1200" width="4168.22" height="1500">
-      <p style="color:#fefefe;font-size:305.73px;font-weight:600;font-family:'Proxima Nova Lt'">
-      %TEXT%
-      </p>
-  </foreignObject>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="111.33px" font-weight="normal" x="2977.49" y="3623.88">P</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="111.33px" font-weight="normal" x="3845.07" y="3623.88">.</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="111.33px" font-weight="normal" x="3063.53" y="3623.88">O</text>
@@ -107,5 +101,5 @@
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="111.33px" font-weight="normal" x="3987.29" y="3623.88">O</text>
   <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="111.33px" font-weight="normal" x="4093.14" y="3623.88">M</text>
   <path d="M666.01 977.02l1648.66 0c115.1,0 209.28,94.18 209.28,209.28l0 1648.66c0,115.1 -94.18,209.28 -209.28,209.28l-1648.66 0c-115.1,0 -209.28,-94.18 -209.28,-209.28l0 -1648.66c0,-115.1 94.18,-209.28 209.28,-209.28z" fill="#C0002D" mask="url(#id4)" />
- </g>
+ <foreignObject height="1728.5800000000002" width="3989.3600000000006" x="2980.68" y="1338.55"><p style="font-weight:600;font-size:305.73px;font-family:'Proxima Nova Lt';color:#FEFEFE;line-height:1.2179701043404314">%TEXT%</p></foreignObject></g>
 </svg>
