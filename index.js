@@ -58,6 +58,75 @@ async function on_svg_change() {
 	on_text_change();
 }
 
+var mousePosition;
+var offset = [0,0];
+var isDown = false;
+var isHover = false;
+var image = null;
+
+function getClientPoint(e) {
+	return {
+		x: e.clientX,
+		y: e.clientY
+	};
+}
+
+function getAttrPoint(element) {
+	return {
+		x: parseFloat(element.getAttribute('x')),
+		y: parseFloat(element.getAttribute('y')),
+	}
+}
+
+function getAttrRect(element) {
+	var point = getAttrPoint(element);
+	return {
+		x: point.x,
+		y: point.y,
+		width:  parseFloat(element.getAttribute('width')),
+		height: parseFloat(element.getAttribute('height')),
+	};
+}
+
+function setAttrPoint(element, point) {
+	element.setAttribute('x', point.x);
+	element.setAttribute('y', point.y);
+}
+
+function setAttrRect(element, rect) {
+	setAttrPoint(element, {x: rect.x, y: rect.y});
+	element.setAttribute('width', rect.width);
+	element.setAttribute('height', rect.height);
+}
+
+function pointsDiff(a, b) {
+	return {
+		x: a.x - b.x,
+		y: a.y - b.y,
+	};
+}
+
+function pointsSum(a, b) {
+	return {
+		x: a.x + b.x,
+		y: a.y + b.y,
+	};
+}
+
+function pointMultiply(point, k) {
+	return {
+		x: point.x * k,
+		y: point.y * k
+	};
+}
+
+function pointPixToPoint(pixPoint) {
+	var viewBox = getViewBox(document.getElementsByTagName('svg')[0]);
+	var imageRect = document.getElementById('svg').getBoundingClientRect();
+	var pixToPoint = viewBox.width / imageRect.width;
+	return pointMultiply(pixPoint, pixToPoint);
+}
+
 function on_text_change() {
 	var text = document.getElementById('title').value;
 	if (text == '') {
@@ -79,8 +148,78 @@ function on_text_change() {
 	var svg = g_svg.replace("%TEXT%", text)
 		           .replace("%SITE%", site)
 		           .replace("%CITY%", city);
-	document.getElementById('svg').innerHTML = svg;
+	var svg_block = document.getElementById('svg');
+	svg_block.innerHTML = svg;
+
+	image = document.getElementsByTagName('image')[0];
+	svg_block.addEventListener('mousedown', function(e) {
+		isDown = true;
+		var imagePoint = getAttrPoint(image);
+		var cursorPoint = pointPixToPoint(getClientPoint(e));
+		offset = pointsDiff(imagePoint, cursorPoint);
+	}, true);
+
+	svg_block.addEventListener('mouseover', function(e) {
+		isHover = true;
+	}, true);
+
+	svg_block.addEventListener('mouseout', function(e) {
+		isHover = false;
+	}, true);
 }
+
+document.addEventListener('mouseup', function() {
+	isDown = false;
+}, true);
+
+document.addEventListener('mousemove', function(e) {
+	e.preventDefault();
+	if (isDown) {
+		var cursorPoint = pointPixToPoint(getClientPoint(e));
+		var newPoint = pointsSum(cursorPoint, offset);
+		setAttrPoint(image, newPoint);
+	}
+}, true);
+
+function getViewBox(element) {
+	var viewBox = element.getAttribute('viewBox');
+	var arr = viewBox.split(' ');
+	return {
+		x: arr[0],
+		y: arr[1],
+		width: arr[2],
+		height: arr[3],
+	}
+}
+
+document.addEventListener('wheel', function(e) {
+	if (isHover) {
+		if (e.deltaY == 0) {
+			return;
+		}
+		e.preventDefault();
+		var increaseCoef = 1.1;
+		var decreaseCoef = 1 / increaseCoef;
+		var coef = null;
+		if (e.deltaY < 0) {
+			coef = increaseCoef;
+		} else if (e.deltaY > 0) {
+			coef = decreaseCoef;
+		}
+
+		var imageData = getAttrRect(image);
+		var imageRect = document.getElementById('svg').getBoundingClientRect();
+		var imagePos = {
+			x: imageRect.left,
+			y: imageRect.top
+		};
+		// In pixels
+		var cursorOnImagePoint = pointsDiff(getClientPoint(e), imagePos);
+		var cursorPoint = pointPixToPoint(cursorOnImagePoint);
+		imageData = scaleImage(imageData, cursorPoint, coef);
+		setAttrRect(image, imageData);
+	}
+}, {passive: false});
 
 function triggerDownload(name, imgURI) {
 	var evt = new MouseEvent('click', {
