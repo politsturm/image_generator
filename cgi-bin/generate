@@ -32,7 +32,7 @@ def generate_svg(template_name, img_url, text):
     response = requests.get(img_url, headers=headers)
 
     img_type = response.headers['Content-Type']
-    data = base64.b64encode(response.content)
+    data = base64.encodebytes(response.content).decode()
     uri = "data:{};base64,{}".format(img_type, data)
 
     template = template_name + '.svg';
@@ -49,7 +49,6 @@ img_url = args['url'];
 template_name = args['template']
 text = args['text'];
 svg = generate_svg(template_name, img_url, text)
-print(svg)
 
 from wand.api import library
 import wand.color
@@ -61,4 +60,4 @@ with wand.image.Image() as image:
                                          background_color.resource)
     image.read(blob=svg.encode('utf-8'))
     png_image = image.make_blob("png32")
-    #sys.stdout.buffer.write(png_image)
+    sys.stdout.buffer.write(png_image)
