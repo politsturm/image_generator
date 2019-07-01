@@ -1,4 +1,4 @@
-var g_svg;
+var globalSvgText;
 
 async function ajax(uri) {
 	return new Promise((resolve, reject) => {
@@ -15,7 +15,7 @@ async function ajax(uri) {
 	});
 }
 
-async function generate_svg(url, template) {
+async function generateSVG(url, template) {
 	var uri = 'cgi-bin/generate' +
 	    '?url=' + url +
 	    '&template=' + template;
@@ -23,7 +23,7 @@ async function generate_svg(url, template) {
 	return ajax(uri);
 }
 
-function get_current_template() {
+function getCurrentTemplate() {
 	var templates = document.getElementsByName('template');
 	for(var i = 0; i < templates.length; i++) {
 		if (templates[i].checked) {
@@ -38,87 +38,30 @@ DEFAULT_TEXT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
 DEFAULT_SITE = 'politsturm.com';
 DEFAULT_CITY = '';
 
-async function get_svg() {
-	var img_url = document.getElementById('url').value;
-	if (img_url == '') {
-		img_url = DEFAULT_IMG_URL;
+async function getSVG() {
+	var imgUrl = document.getElementById('url').value;
+	if (imgUrl == '') {
+		imgUrl = DEFAULT_IMG_URL;
 	}
 
-	var template = get_current_template();
+	var template = getCurrentTemplate();
 	if (template === undefined) {
 		template = DEFAULT_TEMPLATE;
 	}
 
-	return generate_svg(img_url, template);
+	return generateSVG(imgUrl, template);
 }
 
-async function on_svg_change() {
-	var svg = await get_svg();
-	g_svg = svg;
-	on_text_change();
+async function onSVGChange() {
+	var svg = await getSVG();
+	globalSvgText = svg;
+	onTextChange();
 }
 
-var mousePosition;
-var offset = [0,0];
 var isDown = false;
 var isHover = false;
+var offset = null
 var image = null;
-
-function getClientPoint(e) {
-	return {
-		x: e.clientX,
-		y: e.clientY
-	};
-}
-
-function getAttrPoint(element) {
-	return {
-		x: parseFloat(element.getAttribute('x')),
-		y: parseFloat(element.getAttribute('y')),
-	}
-}
-
-function getAttrRect(element) {
-	var point = getAttrPoint(element);
-	return {
-		x: point.x,
-		y: point.y,
-		width:  parseFloat(element.getAttribute('width')),
-		height: parseFloat(element.getAttribute('height')),
-	};
-}
-
-function setAttrPoint(element, point) {
-	element.setAttribute('x', point.x);
-	element.setAttribute('y', point.y);
-}
-
-function setAttrRect(element, rect) {
-	setAttrPoint(element, {x: rect.x, y: rect.y});
-	element.setAttribute('width', rect.width);
-	element.setAttribute('height', rect.height);
-}
-
-function pointsDiff(a, b) {
-	return {
-		x: a.x - b.x,
-		y: a.y - b.y,
-	};
-}
-
-function pointsSum(a, b) {
-	return {
-		x: a.x + b.x,
-		y: a.y + b.y,
-	};
-}
-
-function pointMultiply(point, k) {
-	return {
-		x: point.x * k,
-		y: point.y * k
-	};
-}
 
 function pointPixToPoint(pixPoint) {
 	var viewBox = getViewBox(document.getElementsByTagName('svg')[0]);
@@ -127,7 +70,7 @@ function pointPixToPoint(pixPoint) {
 	return pointMultiply(pixPoint, pixToPoint);
 }
 
-function on_text_change() {
+function onTextChange() {
 	var text = document.getElementById('title').value;
 	if (text == '') {
 		text = DEFAULT_TEXT;
@@ -145,25 +88,25 @@ function on_text_change() {
 		city = '#' + city;
 	}
 
-	var svg = g_svg.replace("%TEXT%", text)
-		           .replace("%SITE%", site)
-		           .replace("%CITY%", city);
-	var svg_block = document.getElementById('svg');
-	svg_block.innerHTML = svg;
+	var svg = globalSvgText.replace("%TEXT%", text)
+		                   .replace("%SITE%", site)
+		                   .replace("%CITY%", city);
+	var svgBlock = document.getElementById('svg');
+	svgBlock.innerHTML = svg;
 
 	image = document.getElementsByTagName('image')[0];
-	svg_block.addEventListener('mousedown', function(e) {
+	svgBlock.addEventListener('mousedown', function(e) {
 		isDown = true;
 		var imagePoint = getAttrPoint(image);
 		var cursorPoint = pointPixToPoint(getClientPoint(e));
 		offset = pointsDiff(imagePoint, cursorPoint);
 	}, true);
 
-	svg_block.addEventListener('mouseover', function(e) {
+	svgBlock.addEventListener('mouseover', function(e) {
 		isHover = true;
 	}, true);
 
-	svg_block.addEventListener('mouseout', function(e) {
+	svgBlock.addEventListener('mouseout', function(e) {
 		isHover = false;
 	}, true);
 }
@@ -238,8 +181,8 @@ function triggerDownload(name, imgURI) {
 }
 
 function download() {
-	on_svg_change();
-	on_text_change();
+	onSVGChange();
+	onTextChange();
 
 	var canvas = document.querySelector('canvas');
 	var svg = document.querySelector('svg');
@@ -287,7 +230,7 @@ function createInput(name, title, checked) {
 	input.id = id;
 	input.value = name;
 	input.checked = checked;
-	input.onchange = on_svg_change;
+	input.onchange = onSVGChange;
 	input.classList.add('custom-control-input');
 	elem.appendChild(input);
 
@@ -313,5 +256,5 @@ window.onload = async function() {
 		block.appendChild(li);
 	}
 
-	on_svg_change();
+	onSVGChange();
 }

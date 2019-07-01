@@ -14,6 +14,7 @@
 		</style>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="matrix.js"></script>
+		<script src="util.js"></script>
 		<script src="index.js"></script>
 	</head>
 
@@ -32,19 +33,19 @@
 		<div>
 			<div class="mb-3">
 				<label for="url">URL изображения</label>
-				<input class="form-control" id="url" onchange="on_svg_change()" type="text" name="url" value="">
+				<input class="form-control" id="url" onchange="onSVGChange()" type="text" name="url" value="">
 			</div>
 			<div class="mb-3">
 				<label for="title">Заголовок новости</label>
-				<input class="form-control" id="title" oninput="on_text_change()" type="text" name="text" value="">
+				<input class="form-control" id="title" oninput="onTextChange()" type="text" name="text" value="">
 			</div>
 			<div class="mb-3">
 				<label for="title">Город</label>
-				<input class="form-control" id="city" oninput="on_text_change()" type="text" name="text" value="">
+				<input class="form-control" id="city" oninput="onTextChange()" type="text" name="text" value="">
 			</div>
 			<div class="mb-3">
 				<label for="title">Отделение</label>
-				<select class="form-control" id="site" onchange="on_text_change()">
+				<select class="form-control" id="site" onchange="onTextChange()">
 					<option value="POLITSTURM.COM">Главное</option>
 					<option value="AM.POLITSTURM.COM">Армения</option>
 					<option value="LV.POLITSTURM.COM">Латвия</option>
