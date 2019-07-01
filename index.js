@@ -88,6 +88,7 @@ function download() {
 	var canvas = document.querySelector('canvas');
 	var svg = document.querySelector('svg');
 	var ctx = canvas.getContext('2d');
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	var data = (new XMLSerializer()).serializeToString(svg);
 	var DOMURL = window.URL || window.webkitURL || window;
 
