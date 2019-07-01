@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+
+import cairo
+import cgi
+import requests
+import base64
+import argparse
+import sys
+
+def get_args():
+    args = {}
+    storage = cgi.FieldStorage()
+    for key in storage.keys():
+        args[key] = storage[key].value
+
+    if len(args) != 0:
+        args['cgi'] = True
+        return args
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-url')
+    parser.add_argument('-text')
+    parser.add_argument('-template')
+    args = parser.parse_args().__dict__
+    args['cgi'] = False
+    return args
+
+def generate_svg(template_name, img_url, text):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36'
+    }
+    response = requests.get(img_url, headers=headers)
+
+    img_type = response.headers['Content-Type']
+    data = base64.b64encode(response.content)
+    uri = "data:{};base64,{}".format(img_type, data)
+
+    template = template_name + '.svg';
+    with open(template, 'r') as f:
+        svg = f.read().replace('%TEXT%', text).replace('%IMAGE%', uri)
+        return svg
+
+args = get_args()
+if args['cgi']:
+    print("Content-type: text/html")
+    print()
+
+img_url = args['url'];
+template_name = args['template']
+text = args['text'];
+svg = generate_svg(template_name, img_url, text)
+print(svg)
+
+from wand.api import library
+import wand.color
+import wand.image
+
+with wand.image.Image() as image:
+    with wand.color.Color('transparent') as background_color:
+        library.MagickSetBackgroundColor(image.wand,
+                                         background_color.resource)
+    image.read(blob=svg.encode('utf-8'))
+    png_image = image.make_blob("png32")
+    #sys.stdout.buffer.write(png_image)
