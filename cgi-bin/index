@@ -11,7 +11,7 @@ print()
 print('''
 <!DOCTYPE html>
 
-<meta encoding="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <style>
 .main {
@@ -26,7 +26,7 @@ print('''
 	<br>
 	<br>
 
-	<form action="gen.php">
+	<form action="gen">
 		URL изображения:<br>
 		<input type="text" name="url" value="">
 		<br>
