@@ -23,6 +23,9 @@ function get_current_template() {
 function get_svg(handler) {
 	var img_url = document.getElementById('url').value;
 	var text = document.getElementById('title').value;
+	if (text == '') {
+		text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa.';
+	}
 	var template = get_current_template();
 
 	var uri = 'cgi-bin/generate' +
@@ -90,18 +93,29 @@ function download() {
 }
 
 function createInput(name, title, checked) {
-	var li = document.createElement('li');
+	var elem = document.createElement('div');
+	elem.classList.add('custom-control');
+	elem.classList.add('custom-radio');
+
+	var id = 'templ-' + name;
 
 	var input = document.createElement('input');
 	input.type = 'radio';
 	input.name = 'template';
+	input.id = id;
 	input.value = name;
 	input.checked = checked;
 	input.onchange = update;
+	input.classList.add('custom-control-input');
+	elem.appendChild(input);
 
-	li.appendChild(input);
-	li.appendChild(document.createTextNode(title));
-	return li;
+	var label = document.createElement('label');
+	label.setAttribute('for', id);
+	label.classList.add('custom-control-label');
+	label.innerHTML = title;
+	elem.appendChild(label);
+
+	return elem;
 }
 
 window.onload = function() {

@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<style>
-.main {
-	width: 600px;
-	margin: 0 auto;
-}
-</style>
+		<style>
+		.main {
+			width: 600px;
+			margin: 0 auto;
+		}
+		</style>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="index.js"></script>
+	</head>
 
-<div class="main">
-	Если шрифт на конечном изображении с засечками, установите шрифт
-	'Proxima Nova'. Можете попробовать файлы отсюда
-	<a href="https://github.com/chrisronline/invision/tree/master/app/fonts/proxima-nova">отсюда</a>.
-	<br>
-	<br>
+	<div role="main" class="container">
+		<h1 class="my-4">
+			Генератор новостных изображений
+		</h1>
+		<div class="alert alert-primary" role="alert">
+			Если шрифт на конечном изображении с засечками, установите шрифт
+			'Proxima Nova'. Можете попробовать файлы
+			<a href="https://github.com/chrisronline/invision/tree/master/app/fonts/proxima-nova" class="alert-link">
+				отсюда
+			</a>
+		</div>
 
-	URL изображения:<br>
-	<input id="url" onchange="update()" type="text" name="url" value="">
-	<br>
-	<br>
-	Заголовок новости:<br>
-	<input id="title" onchange="update()" type="text" name="text" value="">
-	<br>
-	<br>
-	Шаблон:<br>
-	<ul id="templates">
-	</ul>
-	<br>
-	<button onclick="update()">Сгенерировать</button>
-	<button onclick="download()">Скачать</button>
+		<div>
+			<div class="mb-3">
+				<label for="url">URL изображения</label>
+				<input class="form-control" id="url" onchange="update()" type="text" name="url" value="">
+			</div>
+			<div class="mb-3">
+				<label for="title">Заголовок новости</label>
+				<input class="form-control" id="title" onchange="update()" type="text" name="text" value="">
+			</div>
 
-	<div id="svg">
+			<div class="mb-3">
+				<label for="templates">Шаблон</label>
+				<div id="templates" class="mx-2">
+				</div>
+			</div>
+
+			<hr class="mb-3">
+			<button class="btn btn-primary btn-lg btn-block" onclick="download()">Скачать</button>
+		</div>
+
+		<div class="py-5 text-center" id="svg">
+		</div>
+
+		<canvas width="1200" height="600"></canvas>
 	</div>
 
-	<canvas width="1200" height="600"></canvas>
-</div>
-
-<script src="index.js"></script>
+</html>

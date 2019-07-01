@@ -43,6 +43,7 @@ if args['cgi']:
 img_url = args['url'];
 template_name = args['template']
 text = args['text'];
+
 svg = generate_svg(template_name, img_url, text)
 print(svg)
 #png = svg_to_png(svg)
