@@ -6,10 +6,17 @@ import cairo
 import requests
 import base64
 import sys
+import json
 
 from wand.api import library
 import wand.color
 import wand.image
+
+def get_default_template():
+    with open('data/templates.json') as f:
+        templates = json.load(f)
+        for name in templates:
+            return name
 
 def generate_svg(template_name, img_url, text):
     headers = {
@@ -42,7 +49,9 @@ if args['cgi']:
 
 img_url = args['url'];
 template_name = args['template']
-text = args['text'];
+if template_name == 'default':
+    template_name = get_default_template()
+text = '%TEXT%'
 
 svg = generate_svg(template_name, img_url, text)
 print(svg)

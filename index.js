@@ -1,3 +1,5 @@
+var g_svg;
+
 function ajax(uri, onload) {
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', uri);
@@ -20,26 +22,41 @@ function get_current_template() {
 	}
 }
 
+DEFAULT_TEMPLATE = 'default'
+DEFAULT_IMG_URL = 'https://cdnb.artstation.com/p/assets/images/images/012/078/995/large/dmitry-petuhov-lenin.jpg'
+DEFAULT_TEXT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa.';
+
 function get_svg(handler) {
 	var img_url = document.getElementById('url').value;
-	var text = document.getElementById('title').value;
-	if (text == '') {
-		text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa.';
+	if (img_url == '') {
+		img_url = DEFAULT_IMG_URL;
 	}
+
 	var template = get_current_template();
+	if (template === undefined) {
+		template = DEFAULT_TEMPLATE;
+	}
 
 	var uri = 'cgi-bin/generate' +
 		'?url=' + img_url +
-		'&text=' + text +
 		'&template=' + template;
 	ajax(uri, handler);
 }
 
-function update() {
+function on_svg_change() {
 	get_svg(function(svg) {
-		var block = document.getElementById('svg')
-		block.innerHTML = svg;
+		g_svg = svg;
+		on_text_change();
 	});
+}
+
+function on_text_change() {
+	var text = document.getElementById('title').value;
+	if (text == '') {
+		text = DEFAULT_TEXT
+	}
+	var svg = g_svg.replace("%TEXT%", text);
+	document.getElementById('svg').innerHTML = svg;
 }
 
 function triggerDownload(name, imgURI) {
@@ -50,7 +67,8 @@ function triggerDownload(name, imgURI) {
 	});
 
 	var a = document.createElement('a');
-	a.setAttribute('download', name + '.png');
+	var filename = name.trim().replace(/ /g, '_') + '.png'
+	a.setAttribute('download', filename);
 	a.setAttribute('href', imgURI);
 	a.setAttribute('target', '_blank');
 
@@ -58,7 +76,8 @@ function triggerDownload(name, imgURI) {
 }
 
 function download() {
-	update();
+	on_svg_change();
+	on_text_change();
 
 	var canvas = document.querySelector('canvas');
 	var svg = document.querySelector('svg');
@@ -105,7 +124,7 @@ function createInput(name, title, checked) {
 	input.id = id;
 	input.value = name;
 	input.checked = checked;
-	input.onchange = update;
+	input.onchange = on_svg_change;
 	input.classList.add('custom-control-input');
 	elem.appendChild(input);
 
@@ -131,4 +150,5 @@ window.onload = function() {
 			block.appendChild(li);
 		}
 	});
+	on_svg_change();
 }
