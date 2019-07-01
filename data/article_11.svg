@@ -1,28 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" clip-rule="evenodd" fill-rule="evenodd" height="285.75mm" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 5127.66 2884.31" width="508mm" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" clip-rule="evenodd" fill-rule="evenodd" height="1080" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 4455.02 2505.95" width="1920" xml:space="preserve">
  <defs>
   <clipPath id="id0">
-    <rect height="2884.31" width="4327.52" x="800.14" />
+    <rect height="2505.95" width="2178.01" x="2277.01" />
    </clipPath>
+   <linearGradient gradientUnits="userSpaceOnUse" id="id1" x1="1114.59" x2="1944.52" y1="37.22" y2="2468.72">
+    <stop offset="0" stop-color="#FC002F" stop-opacity="1" />
+    <stop offset="1" stop-color="#A80322" stop-opacity="1" />
+   </linearGradient>
  </defs>
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <g clip-path="url(#id0)">
-   <image height="2884.31" width="4327.52" x="800.14" y="-0" xlink:href="%IMAGE%" />
+   <image height="2505.95" width="2178.01" x="2277.01" y="0" xlink:href="%IMAGE%" />
   </g>
-  <polygon fill="#0136CD" fill-opacity="0.250980" points="-0,0 5127.66,0 5127.66,2884.31 -0,2884.31 " />
-  <path d="M3521 0l-3521 0 0 2884.31 3102.24 0 328.97 -325.61c59.66,-59.05 89.79,-131.28 89.79,-215.22l0 -2343.48z" fill="white" />
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="985.56" y="2599.29">P</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1607.84" y="2599.29">.</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1047.27" y="2599.29">O</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1123.19" y="2599.29">L</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1178.75" y="2599.29">I</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1212.67" y="2599.29">T</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1272.78" y="2599.29">S</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1333.93" y="2599.29">T</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1394.28" y="2599.29">U</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1465.02" y="2599.29">R</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1528.4" y="2599.29">M</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1641.04" y="2599.29">C</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1709.85" y="2599.29">O</text>
-  <text fill="black" font-family="Proxima Nova Rg" font-size="79.86px" font-weight="normal" x="1785.78" y="2599.29">M</text>
- <foreignObject height="1239.86" width="2981.76" x="309.01" y="960.0900000000001"><p style="font-weight:600;font-size:219.29px;font-family:'Proxima Nova Lt';color:black;line-height:1.2180217976195902">%TEXT%</p></foreignObject></g>
+  <polygon fill="#0136CD" fill-opacity="0.250980" points="-0,0 4455.02,0 4455.02,2505.95 -0,2505.95 " />
+  <path d="M3059.11 0l-3059.11 0 0 2505.95 2695.29 0 285.81 -282.9c51.83,-51.3 78.01,-114.06 78.01,-186.99l0 -2036.06z" fill="url(#id1)" />
+  <foreignObject height="1077.1999999999998" width="2590.62" x="280.75" y="834.1500000000001"><p style="font-weight:600;font-size:190.52px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2180348519840434">%TEXT%</p></foreignObject><foreignObject height="154.68" width="533.4499999999999" x="1130.18" y="209.67999999999998"><p style="font-weight:bold;font-size:77.34px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="138.76" width="764.63" x="983.99" y="2188.93"><p style="font-weight:normal;font-size:69.38px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
 </svg>

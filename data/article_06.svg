@@ -1,44 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" clip-rule="evenodd" fill-rule="evenodd" height="285.75mm" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 67400.03 37912.51" width="508mm" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" clip-rule="evenodd" fill-rule="evenodd" height="1080" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 4455.02 2505.95" width="1920" xml:space="preserve">
  <defs>
   <clipPath id="id0">
-    <rect height="37912.51" width="56882.65" x="10517.38" />
+    <rect height="2505.95" width="3759.84" x="695.18" />
    </clipPath>
    <mask id="id1">
-     <linearGradient gradientUnits="userSpaceOnUse" id="id2" x1="7975.63" x2="7975.68" y1="60739.26" y2="26034.53">
+     <linearGradient gradientUnits="userSpaceOnUse" id="id2" x1="527.17" x2="527.18" y1="4014.75" y2="1720.83">
       <stop offset="0" stop-color="white" stop-opacity="1" />
       <stop offset="1" stop-color="white" stop-opacity="0" />
      </linearGradient>
-    <rect fill="url(#id2)" height="37939.04" width="43948.86" x="-13.27" y="-13.27" />
+    <rect fill="url(#id2)" height="2507.7" width="2904.94" x="-0.88" y="-0.88" />
    </mask>
    <mask id="id3">
-     <linearGradient gradientUnits="userSpaceOnUse" id="id4" x1="8200.29" x2="8200.34" y1="-21264.21" y2="11761.83">
+     <linearGradient gradientUnits="userSpaceOnUse" id="id4" x1="542.02" x2="542.03" y1="-1405.53" y2="777.44">
       <stop offset="0" stop-color="white" stop-opacity="1" />
       <stop offset="1" stop-color="white" stop-opacity="0" />
      </linearGradient>
-    <rect fill="url(#id4)" height="23222.26" width="13394.17" x="-13.27" y="-13.27" />
+    <rect fill="url(#id4)" height="1534.95" width="885.33" x="-0.88" y="-0.88" />
    </mask>
  </defs>
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <g clip-path="url(#id0)">
-   <image height="37912.51" width="56882.66" x="10517.37" y="-0" xlink:href="%IMAGE%" />
+   <image height="2505.95" width="3759.84" x="695.18" y="-0" xlink:href="%IMAGE%" />
   </g>
-  <polygon fill="#0136CD" fill-opacity="0.200000" points="67400.03,0 -0,0 -0,37912.51 67400.03,37912.51 " />
-  <polygon fill="#E70026" points="36676.8,37912.51 -0,37912.51 -0,0 58525.67,0 " />
-  <polygon fill="#980012" mask="url(#id1)" points="22073.45,37912.51 -0,37912.51 -0,0 43922.32,0 " />
-  <polygon fill="#980015" mask="url(#id3)" points="-0,23195.73 -0,0 13367.63,0 " />
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="12042.86" y="34166.03">P</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="20222.35" y="34166.03">.</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="12853.99" y="34166.03">O</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="13851.95" y="34166.03">L</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="14582.25" y="34166.03">I</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="15028.1" y="34166.03">T</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="15818.24" y="34166.03">S</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="16622.02" y="34166.03">T</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="17415.3" y="34166.03">U</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="18345.04" y="34166.03">R</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="19178.21" y="34166.03">M</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="20658.75" y="34166.03">C</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="21563.29" y="34166.03">O</text>
-  <text fill="#FEFEFE" font-family="Proxima Nova Rg" font-size="1049.65px" font-weight="normal" x="22561.25" y="34166.03">M</text>
- <foreignObject height="16297.019999999997" width="39193.409999999996" x="3150.08" y="12619.900000000001"><p style="font-weight:600;font-size:2882.39px;font-family:'Proxima Nova Lt';color:#FEFEFE;line-height:1.2179996461269988">%TEXT%</p></foreignObject></g>
+  <polygon fill="#0136CD" fill-opacity="0.200000" points="4455.02,0 -0,0 -0,2505.95 4455.02,2505.95 " />
+  <polygon fill="#E70026" points="2424.27,2505.95 -0,2505.95 -0,0 3868.44,0 " />
+  <polygon fill="#980012" mask="url(#id1)" points="1459.01,2505.95 -0,2505.95 -0,0 2903.18,0 " />
+  <polygon fill="#980015" mask="url(#id3)" points="-0,1533.2 -0,0 883.58,0 " />
+  <foreignObject height="1077.1999999999998" width="2590.62" x="208.21" y="834.1500000000001"><p style="font-weight:600;font-size:190.52px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2180348519840434">%TEXT%</p></foreignObject><foreignObject height="154.68" width="533.4499999999999" x="922.73" y="222.84"><p style="font-weight:bold;font-size:77.34px;font-family:'Proxima Nova Rg';color:white;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="138.76" width="764.63" x="796.01" y="2188.93"><p style="font-weight:normal;font-size:69.38px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
 </svg>
