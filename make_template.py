@@ -116,6 +116,16 @@ def main(input_svg, output_svg):
     for image in root.findall('.//{http://www.w3.org/2000/svg}image'):
         image.set('{http://www.w3.org/1999/xlink}href', '%IMAGE%')
         image.attrib['width'] = str(viewBox['width'])
+        x = float(image.attrib['x'])
+        x = 0 if x < 0 else x
+        y = float(image.attrib['y'])
+        y = 0 if y < 0 else y
+        width = float(image.attrib['width'])
+        height = float(image.attrib['height'])
+        image.attrib['x'] = str(x - width * 0.1)
+        image.attrib['y'] = str(y - height * 0.1)
+        image.attrib['width'] = str(width * 1.2)
+        image.attrib['height'] = str(height * 1.2)
 
     replace_text(tree, is_news_text, '%TEXT%', letter_spacing=0.07)
     replace_text(tree, is_tag_text,  '%CITY%', letter_spacing=0.07, width_k=1.3)

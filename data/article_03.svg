@@ -23,11 +23,11 @@
  </defs>
  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
   <g clip-path="url(#id0)">
-   <image clip-path="url(#id1)" height="3998.18" width="7107.88" x="-444.24" y="0" xlink:href="%IMAGE%" />
+   <image clip-path="url(#id1)" height="4797.816" width="8529.456" x="-710.788" y="-399.818" xlink:href="%IMAGE%" />
   </g>
   <polygon fill="url(#id2)" fill-opacity="0.901961" points="-0,0 7107.88,0 7107.88,3998.18 -0,3998.18 " />
   <g clip-path="url(#id3)">
-   <image height="2196.54" width="7107.88" x="-714.75" y="900.82" xlink:href="%IMAGE%" />
+   <image x="-714.75" y="900.82" width="4393.08" height="2196.54" height="2635.848" xlink:href="%IMAGE%" />
   </g>
   <path d="M662.18 971.41l1639.21 0c114.44,0 208.08,93.64 208.08,208.08l0 1639.21c0,114.44 -93.64,208.08 -208.08,208.08l-1639.21 0c-114.44,0 -208.08,-93.64 -208.08,-208.08l0 -1639.21c0,-114.44 93.64,-208.08 208.08,-208.08z" fill="#C0002D" mask="url(#id4)" />
   <foreignObject height="1718.6500000000003" width="3966.4700000000003" x="2963.58" y="1330.87"><p style="font-weight:600;font-size:303.97px;font-family:'Proxima Nova Lt';color:#FEFEFE;letter-spacing:0.07em;line-height:1.2180149356844425">%TEXT%</p></foreignObject><foreignObject height="246.8" width="1106.443" x="2973.17" y="355.36"><p style="font-weight:bold;font-size:123.4px;font-family:'Proxima Nova Rg';color:white;letter-spacing:0.07em">%CITY%</p></foreignObject><foreignObject height="221.38" width="1585.922" x="2966.49" y="3492.4"><p style="font-weight:normal;font-size:110.69px;font-family:'Proxima Nova Rg';color:#FEFEFE;letter-spacing:0.19em">%SITE%</p></foreignObject></g>
