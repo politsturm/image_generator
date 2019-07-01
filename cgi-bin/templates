@@ -2,7 +2,7 @@
 
 import json
 
-print("Content-type: text/html")
+print("Content-type: text/json")
 print()
 
 with open('templates.json') as f:
