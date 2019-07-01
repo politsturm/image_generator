@@ -182,9 +182,6 @@ function triggerDownload(name, imgURI) {
 }
 
 function download() {
-	onSVGChange();
-	onTextChange();
-
 	var canvas = document.querySelector('canvas');
 	var svg = document.querySelector('svg');
 	var ctx = canvas.getContext('2d');
