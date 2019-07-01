@@ -94,7 +94,8 @@ function onTextChange() {
 	var svgBlock = document.getElementById('svg');
 	svgBlock.innerHTML = svg;
 
-	image = document.getElementsByTagName('image')[0];
+	var images = document.getElementsByTagName('image')
+	image = images[images.length - 1];
 	svgBlock.addEventListener('mousedown', function(e) {
 		isDown = true;
 		var imagePoint = getAttrPoint(image);
