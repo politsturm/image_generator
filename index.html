@@ -37,6 +37,21 @@
 				<label for="title">Заголовок новости</label>
 				<input class="form-control" id="title" oninput="on_text_change()" type="text" name="text" value="">
 			</div>
+			<div class="mb-3">
+				<label for="title">Город</label>
+				<input class="form-control" id="city" oninput="on_text_change()" type="text" name="text" value="">
+			</div>
+			<div class="mb-3">
+				<label for="title">Отделение</label>
+				<select class="form-control" id="site" onchange="on_text_change()">
+					<option value="POLITSTURM.COM">Главное</option>
+					<option value="AM.POLITSTURM.COM">Армения</option>
+					<option value="LV.POLITSTURM.COM">Латвия</option>
+					<option value="KZ.POLITSTURM.COM">Казахстан</option>
+					<option value="UA.POLITSTURM.COM">Украина</option>
+					<option value="US.POLITSTURM.COM">USA</option>
+				</select>
+			</div>
 
 			<div class="mb-3">
 				<label for="templates">Шаблон</label>

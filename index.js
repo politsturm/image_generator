@@ -35,6 +35,8 @@ function get_current_template() {
 DEFAULT_TEMPLATE = 'default'
 DEFAULT_IMG_URL = 'https://cdnb.artstation.com/p/assets/images/images/012/078/995/large/dmitry-petuhov-lenin.jpg'
 DEFAULT_TEXT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa.';
+DEFAULT_SITE = 'politsturm.com';
+DEFAULT_CITY = '';
 
 async function get_svg() {
 	var img_url = document.getElementById('url').value;
@@ -59,9 +61,24 @@ async function on_svg_change() {
 function on_text_change() {
 	var text = document.getElementById('title').value;
 	if (text == '') {
-		text = DEFAULT_TEXT
+		text = DEFAULT_TEXT;
 	}
-	var svg = g_svg.replace("%TEXT%", text);
+
+	var site = document.getElementById('site').value;
+	if (site == '') {
+		site = DEFAULT_SITE;
+	}
+
+	var city = document.getElementById('city').value;
+	if (city == '') {
+		city = DEFAULT_CITY;
+	} else {
+		city = '#' + city;
+	}
+
+	var svg = g_svg.replace("%TEXT%", text)
+		           .replace("%SITE%", site)
+		           .replace("%CITY%", city);
 	document.getElementById('svg').innerHTML = svg;
 }
 
