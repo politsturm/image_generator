@@ -52,45 +52,13 @@ async function getSVG() {
 	return generateSVG(imgUrl, template);
 }
 
-async function onSVGChange() {
-	var svg = await getSVG();
-	globalSvgText = svg;
-	onTextChange();
-}
-
 var isDown = false;
 var isHover = false;
 var offset = null
 var image = null;
 
-function pointPixToPoint(pixPoint) {
-	var viewBox = getViewBox(document.getElementsByTagName('svg')[0]);
-	var imageRect = document.getElementById('svg').getBoundingClientRect();
-	var pixToPoint = viewBox.width / imageRect.width;
-	return pointMultiply(pixPoint, pixToPoint);
-}
-
-function onTextChange() {
-	var text = document.getElementById('title').value;
-	if (text == '') {
-		text = DEFAULT_TEXT;
-	}
-
-	var site = document.getElementById('site').value;
-	if (site == '') {
-		site = DEFAULT_SITE;
-	}
-
-	var city = document.getElementById('city').value;
-	if (city == '') {
-		city = DEFAULT_CITY;
-	} else {
-		city = '#' + city;
-	}
-
-	var svg = globalSvgText.replace("%SVG_TEXT%", text)
-		                   .replace("%SVG_SITE%", site)
-		                   .replace("%SVG_CITY%", city);
+async function onSVGChange() {
+	var svg = await getSVG();
 	var svgBlock = document.getElementById('svg');
 	svgBlock.innerHTML = svg;
 
@@ -110,6 +78,47 @@ function onTextChange() {
 	svgBlock.addEventListener('mouseout', function(e) {
 		isHover = false;
 	}, true);
+
+	updateSVG();
+}
+
+function pointPixToPoint(pixPoint) {
+	var viewBox = getViewBox(document.getElementsByTagName('svg')[0]);
+	var imageRect = document.getElementById('svg').getBoundingClientRect();
+	var pixToPoint = viewBox.width / imageRect.width;
+	return pointMultiply(pixPoint, pixToPoint);
+}
+
+function onTextChange() {
+	var text = document.getElementById('title').value;
+	if (text == '') {
+		text = DEFAULT_TEXT;
+	}
+	document.getElementById('svg_text').innerHTML = text;
+}
+
+function onSiteChange() {
+	var site = document.getElementById('site').value;
+	if (site == '') {
+		site = DEFAULT_SITE;
+	}
+	document.getElementById('svg_site').innerHTML = site;
+}
+
+function onCityChange() {
+	var city = document.getElementById('city').value;
+	if (city == '') {
+		city = DEFAULT_CITY;
+	} else {
+		city = '#' + city;
+	}
+	document.getElementById('svg_city').innerHTML = city;
+}
+
+function updateSVG() {
+	onTextChange();
+	onSiteChange();
+	onCityChange();
 }
 
 document.addEventListener('mouseup', function() {
