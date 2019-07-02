@@ -54,6 +54,7 @@ async function getSVG() {
 
 var isDown = false;
 var isHover = false;
+var isShiftPressed = false;
 var offset = null
 var image = null;
 
@@ -81,6 +82,19 @@ async function onSVGChange() {
 
 	updateSVG();
 }
+
+document.addEventListener('keydown', function(e) {
+	if (e.key == 'Shift') {
+		isShiftPressed = true;
+	}
+}, true);
+
+document.addEventListener('keyup', function(e) {
+	if (e.key == 'Shift') {
+		isShiftPressed = false;
+	}
+}, true);
+
 
 function pointPixToPoint(pixPoint) {
 	var viewBox = getViewBox(document.getElementsByTagName('svg')[0]);
@@ -146,32 +160,39 @@ function getViewBox(element) {
 }
 
 document.addEventListener('wheel', function(e) {
-	if (isHover) {
-		if (e.deltaY == 0) {
-			return;
-		}
-		e.preventDefault();
-		var increaseCoef = 1.1;
-		var decreaseCoef = 1 / increaseCoef;
-		var coef = null;
-		if (e.deltaY < 0) {
-			coef = increaseCoef;
-		} else if (e.deltaY > 0) {
-			coef = decreaseCoef;
-		}
-
-		var imageData = getAttrRect(image);
-		var imageRect = document.getElementById('svg').getBoundingClientRect();
-		var imagePos = {
-			x: imageRect.left,
-			y: imageRect.top
-		};
-		// In pixels
-		var cursorOnImagePoint = pointsDiff(getClientPoint(e), imagePos);
-		var cursorPoint = pointPixToPoint(cursorOnImagePoint);
-		imageData = scaleImage(imageData, cursorPoint, coef);
-		setAttrRect(image, imageData);
+	if (!isHover) {
+		return;
 	}
+
+	if (!isShiftPressed) {
+		return;
+	}
+
+	if (e.deltaY == 0) {
+		return;
+	}
+
+	e.preventDefault();
+	var increaseCoef = 1.1;
+	var decreaseCoef = 1 / increaseCoef;
+	var coef = null;
+	if (e.deltaY < 0) {
+		coef = increaseCoef;
+	} else if (e.deltaY > 0) {
+		coef = decreaseCoef;
+	}
+
+	var imageData = getAttrRect(image);
+	var imageRect = document.getElementById('svg').getBoundingClientRect();
+	var imagePos = {
+		x: imageRect.left,
+		y: imageRect.top
+	};
+	// In pixels
+	var cursorOnImagePoint = pointsDiff(getClientPoint(e), imagePos);
+	var cursorPoint = pointPixToPoint(cursorOnImagePoint);
+	imageData = scaleImage(imageData, cursorPoint, coef);
+	setAttrRect(image, imageData);
 }, {passive: false});
 
 function triggerDownload(name, imgURI) {
