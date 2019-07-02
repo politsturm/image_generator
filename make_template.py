@@ -51,7 +51,7 @@ def get_style(tags, letter_spacing):
     del text.attrib['y']
     return ';'.join([ '{}:{}'.format(k, v) for (k, v) in text.attrib.items() ])
 
-def create_foreign_object(tags, content, letter_spacing, width_k):
+def create_foreign_object(tags, tag_id, letter_spacing, width_k):
     min_x = min([ float(tag.attrib['x']) for tag in tags ])
     max_x = max([ float(tag.attrib['x']) for tag in tags ])
     min_y = min([ float(tag.attrib['y']) for tag in tags ])
@@ -72,12 +72,13 @@ def create_foreign_object(tags, content, letter_spacing, width_k):
 
     p = Element('p')
     p.attrib['style'] = get_style(tags, letter_spacing)
-    p.text = content
+    p.attrib['id'] = tag_id
+    p.text = '%{}%'.format(tag_id.upper())
     fo.append(p)
 
     return fo
 
-def replace_text(tree, selector, content, letter_spacing, width_k=1.0):
+def replace_text(tree, selector, tag_id, letter_spacing, width_k=1.0):
     root = tree.getroot()
     tags = [ text
             for text in root.findall('.//{http://www.w3.org/2000/svg}text')
@@ -86,7 +87,7 @@ def replace_text(tree, selector, content, letter_spacing, width_k=1.0):
 
     first_text = tags[0]
     parent = get_parent(tree, first_text)
-    fo = create_foreign_object(tags, content, letter_spacing, width_k)
+    fo = create_foreign_object(tags, tag_id, letter_spacing, width_k)
     parent.append(fo)
 
     for tag in tags:
@@ -127,9 +128,9 @@ def main(input_svg, output_svg):
         image.attrib['width'] = str(width * 1.2)
         image.attrib['height'] = str(height * 1.2)
 
-    replace_text(tree, is_news_text, '%TEXT%', letter_spacing=0.07)
-    replace_text(tree, is_tag_text,  '%CITY%', letter_spacing=0.07, width_k=1.3)
-    replace_text(tree, is_site_name, '%SITE%', letter_spacing=0.19, width_k=1.3)
+    replace_text(tree, is_news_text, 'svg_text', letter_spacing=0.07)
+    replace_text(tree, is_tag_text,  'svg_city', letter_spacing=0.07, width_k=1.3)
+    replace_text(tree, is_site_name, 'svg_site', letter_spacing=0.19, width_k=1.3)
 
     for tag in root.findall('.//{http://www.w3.org/2000/svg}font'):
         parent = get_parent(root, tag)

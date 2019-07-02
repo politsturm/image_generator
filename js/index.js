@@ -88,9 +88,9 @@ function onTextChange() {
 		city = '#' + city;
 	}
 
-	var svg = globalSvgText.replace("%TEXT%", text)
-		                   .replace("%SITE%", site)
-		                   .replace("%CITY%", city);
+	var svg = globalSvgText.replace("%SVG_TEXT%", text)
+		                   .replace("%SVG_SITE%", site)
+		                   .replace("%SVG_CITY%", city);
 	var svgBlock = document.getElementById('svg');
 	svgBlock.innerHTML = svg;
 
