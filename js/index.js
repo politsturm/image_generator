@@ -230,6 +230,8 @@ function download() {
 	}
 
 	img.onload = function () {
+		document.getElementById('download-help').classList.remove('d-none');
+		canvas.classList.remove('d-none');
 		ctx.drawImage(img, 0, 0);
 		DOMURL.revokeObjectURL(url);
 

@@ -22,11 +22,16 @@
 			Генератор новостных изображений
 		</h1>
 		<div class="alert alert-primary" role="alert">
-			Если шрифт на конечном изображении с засечками, установите шрифт
-			'Proxima Nova'. Можете попробовать файлы
-			<a href="https://github.com/chrisronline/invision/tree/master/app/fonts/proxima-nova" class="alert-link">
-				отсюда
+			Для корректной работы генератора в вашей системе должны стоять шрифты
+			<a href="fonts/ProximaNova-Regular.ttf" class="alert-link">
+				'Proxima Nova Regular'
 			</a>
+			и
+			<a href="fonts/ProximaNova-Light.ttf" class="alert-link">
+				'Proxima Nova Light'
+			</a>
+			. После их установки в систему может потребоваться перезагрузка
+			браузера.
 		</div>
 
 		<div>
@@ -71,6 +76,13 @@
 		<div class="mb-5 mx-auto" id="svg">
 		</div>
 
+		<div class="d-none" id="download-help">
+			<div class="alert alert-primary" role="alert">
+				Если по какой-то причине скачивание не началось, нажмите на
+				картинке ниже правой кнопкой мыши и выберите "сохранить
+				изображение как..".
+			</div>
+		</div>
 		<canvas class="d-none" height="1080" width="1920"></canvas>
 	</div>
 
