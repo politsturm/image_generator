@@ -52,14 +52,34 @@ async function getSVG() {
 	return generateSVG(imgUrl, template);
 }
 
+async function getFonts() {
+	var fontsTag = document.getElementById('fonts');
+	var uri = fontsTag.href;
+	return ajax(uri);
+}
+
 var isDown = false;
 var isHover = false;
 var isShiftPressed = false;
 var offset = null
 var image = null;
 
+async function injectFonts(svg, fonts) {
+	var docu = new DOMParser().parseFromString(svg, 'application/xml');
+	var style = docu.createElementNS('http://www.w3.org/2000/svg', 'style');
+	style.setAttribute('type', 'text/css');
+
+	var cdata = docu.createCDATASection(fonts);
+	style.appendChild(cdata);
+	docu.querySelector('defs').appendChild(style);
+	return new XMLSerializer().serializeToString(docu);
+}
+
 async function onSVGChange() {
 	var svg = await getSVG();
+	var fonts = await getFonts();
+	svg = await injectFonts(svg, fonts);
+
 	var svgBlock = document.getElementById('svg');
 	svgBlock.innerHTML = svg;
 
