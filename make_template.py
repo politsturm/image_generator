@@ -111,8 +111,8 @@ def main(input_svg, output_svg):
         return
 
     root = tree.getroot()
-    root.attrib['width'] = '1920'
-    root.attrib['height'] = '1080'
+    root.attrib['width'] = '1440'
+    root.attrib['height'] = '810'
     viewBox = getViewBox(root.attrib['viewBox'])
     for image in root.findall('.//{http://www.w3.org/2000/svg}image'):
         image.set('{http://www.w3.org/1999/xlink}href', '%IMAGE%')
