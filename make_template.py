@@ -115,8 +115,13 @@ def main(input_svg, output_svg):
     root.attrib['width'] = '1440'
     root.attrib['height'] = '810'
     viewBox = getViewBox(root.attrib['viewBox'])
+    is_first = True
     for image in root.findall('.//{http://www.w3.org/2000/svg}image'):
         image.set('{http://www.w3.org/1999/xlink}href', '%IMAGE%')
+        if not is_first:
+            continue
+
+        is_first = False
         image.attrib['width'] = str(viewBox['width'])
         x = float(image.attrib['x'])
         x = 0 if x < 0 else x
