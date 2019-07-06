@@ -1,9 +1,0 @@
-#!/usr/bin/env python3
-
-import json
-
-print("Content-type: text/json")
-print()
-
-with open('data/templates.json') as f:
-    print(f.read())

@@ -302,7 +302,7 @@ function createInput(name, title, checked) {
 }
 
 window.onload = async function() {
-	var result = await ajax('cgi-bin/templates');
+	var result = await ajax('data/templates.json');
 	var templates = JSON.parse(result);
 	var checked = true
 	for (var name in templates) {
