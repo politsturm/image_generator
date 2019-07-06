@@ -36,22 +36,17 @@ def get_lineheight(tags):
     font_size = get_font_size(tags[0])
     return dy / font_size
 
-def get_style(tags, letter_spacing):
+def get_style(tags):
     text = tags[0]
     text.attrib['color'] = text.attrib['fill']
     text.attrib['font-family'] = "'{}'".format(text.attrib['font-family'])
-    text.attrib['letter-spacing'] = '{}em'.format(letter_spacing)
-    line_height = get_lineheight(tags)
-    if line_height:
-        text.attrib['line-height'] = str(line_height)
 
+    for attr in ['font-weight', 'font-family', 'fill', 'x', 'y']:
+        del text.attrib[attr]
 
-    del text.attrib['fill']
-    del text.attrib['x']
-    del text.attrib['y']
     return ';'.join([ '{}:{}'.format(k, v) for (k, v) in text.attrib.items() ])
 
-def create_foreign_object(tags, tag_id, letter_spacing, width_k):
+def create_foreign_object(tags, tag_id, tag_class, width_k=1):
     min_x = min([ float(tag.attrib['x']) for tag in tags ])
     max_x = max([ float(tag.attrib['x']) for tag in tags ])
     min_y = min([ float(tag.attrib['y']) for tag in tags ])
@@ -71,14 +66,20 @@ def create_foreign_object(tags, tag_id, letter_spacing, width_k):
     fo.set('height', str(height))
 
     p = Element('p')
-    p.attrib['style'] = get_style(tags, letter_spacing)
+    p.attrib['style'] = get_style(tags)
     p.attrib['id'] = tag_id
     p.text = '%{}%'.format(tag_id.upper())
-    fo.append(p)
+
+    div = Element('div')
+    if tag_class:
+        div.attrib['class'] = tag_class
+    div.append(p)
+
+    fo.append(div)
 
     return fo
 
-def replace_text(tree, selector, tag_id, letter_spacing, width_k=1.0):
+def replace_text(tree, selector, tag_id, tag_class=None, width_k=1.0):
     root = tree.getroot()
     tags = [ text
             for text in root.findall('.//{http://www.w3.org/2000/svg}text')
@@ -87,7 +88,7 @@ def replace_text(tree, selector, tag_id, letter_spacing, width_k=1.0):
 
     first_text = tags[0]
     parent = get_parent(tree, first_text)
-    fo = create_foreign_object(tags, tag_id, letter_spacing, width_k)
+    fo = create_foreign_object(tags, tag_id, tag_class, width_k)
     parent.append(fo)
 
     for tag in tags:
@@ -128,9 +129,13 @@ def main(input_svg, output_svg):
         image.attrib['width'] = str(width * 1.2)
         image.attrib['height'] = str(height * 1.2)
 
-    replace_text(tree, is_news_text, 'svg_text', letter_spacing=0.07)
-    replace_text(tree, is_tag_text,  'svg_city', letter_spacing=0.07, width_k=1.3)
-    replace_text(tree, is_site_name, 'svg_site', letter_spacing=0.19, width_k=1.3)
+    replace_text(tree, is_news_text, 'svg_text', tag_class='text-container')
+    fo = root.find('.//foreignObject')
+    fo.attrib['y'] = str(viewBox['height'] / 4)
+    fo.attrib['height'] = str(viewBox['height'] / 2)
+
+    replace_text(tree, is_tag_text,  'svg_city', width_k=1.3)
+    replace_text(tree, is_site_name, 'svg_site', width_k=1.3)
 
     for tag in root.findall('.//{http://www.w3.org/2000/svg}font'):
         parent = get_parent(root, tag)
