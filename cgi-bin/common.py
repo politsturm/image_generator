@@ -13,8 +13,6 @@ def get_args():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-url', required=True)
-    parser.add_argument('-text', required=True)
-    parser.add_argument('-template', required=True)
     args = parser.parse_args().__dict__
     args['cgi'] = False
     return args

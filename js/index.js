@@ -15,14 +15,37 @@ async function ajax(uri) {
 	});
 }
 
+async function getImageFromServer(url) {
+	return new Promise(async (resolve, reject) => {
+		// Already server request
+		if (url.startsWith('cgi-bin')) {
+			reject();
+			return;
+		}
+
+		var image = await ajaxImage('cgi-bin/download?url=' + url);
+		resolve(image);
+	});
+}
+
 async function ajaxImage(url) {
-	return new Promise((resolve, reject) => {
+	return new Promise(async (resolve, reject) => {
 		var xhr = new XMLHttpRequest();
 		xhr.open('GET', url);
 		xhr.responseType = 'blob';
-		xhr.onload = function() {
+		xhr.onerror = async function() {
+			var image = await getImageFromServer(url);
+			resolve(image);
+		}
+		xhr.onload = async function() {
 			if (xhr.status !== 200) {
 				reject(xhr.status);
+				return;
+			}
+
+			if (xhr.response.size === 0) {
+				var image = await getImageFromServer(url);
+				resolve(image);
 				return;
 			}
 

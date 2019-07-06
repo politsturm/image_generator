@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+from common import get_args
+import requests
+import sys
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36'
+}
+
+args = get_args()
+img_url = args['url']
+response = requests.get(img_url, headers=headers)
+
+img_type = response.headers['Content-Type']
+content_type = 'Content-Type: {}\n\n'.format(img_type)
+sys.stdout.buffer.write(content_type.encode('utf8'))
+sys.stdout.buffer.write(response.content)
