@@ -1,0 +1,25 @@
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#svg_text {
+    font-weight: 600;
+    font-family: 'Proxima Nova Lt';
+    letter-spacing: 0.07em;
+    line-height: 1.2180149356844425;
+}
+
+#svg_city {
+    font-weight: bold;
+    font-family: 'Proxima Nova Rg';
+    letter-spacing: 0.07em;
+}
+
+#svg_site {
+    font-weight: normal;
+    font-family: 'Proxima Nova Rg';
+    letter-spacing: 0.19em;
+}
