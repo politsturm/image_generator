@@ -1,14 +1,14 @@
 version: '3.3'
 services:
-  python:
-    build: .
+  nginx:
+    image: nginx:1.16.0
     volumes:
-    - .:/var/www
-    working_dir: /var/www
+    - .:/usr/share/nginx/html
+    working_dir: /usr/share/nginx/html
     restart: always
     networks:
       default:
         aliases:
-          - image_generator_python
+          - image_generator
     ports:
-    - "8021:8000"
+    - "8021:80"
