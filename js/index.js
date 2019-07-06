@@ -58,13 +58,19 @@ async function getFonts() {
 	return ajax(uri);
 }
 
+async function getStyle() {
+	var tag = document.getElementById('style');
+	var uri = tag.href;
+	return ajax(uri);
+}
+
 var isDown = false;
 var isHover = false;
 var isShiftPressed = false;
 var offset = null
 var image = null;
 
-async function injectFonts(svg, fonts) {
+async function injectStyle(svg, fonts) {
 	var docu = new DOMParser().parseFromString(svg, 'application/xml');
 	var style = docu.createElementNS('http://www.w3.org/2000/svg', 'style');
 	style.setAttribute('type', 'text/css');
@@ -78,7 +84,9 @@ async function injectFonts(svg, fonts) {
 async function onSVGChange() {
 	var svg = await getSVG();
 	var fonts = await getFonts();
-	svg = await injectFonts(svg, fonts);
+	svg = await injectStyle(svg, fonts);
+	var style = await getStyle();
+	svg = await injectStyle(svg, style);
 
 	var svgBlock = document.getElementById('svg');
 	svgBlock.innerHTML = svg;
