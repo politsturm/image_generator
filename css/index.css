@@ -1,3 +1,7 @@
+svg {
+    max-width: 100%;
+}
+
 .text-container {
     display: flex;
     align-items: center;
