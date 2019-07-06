@@ -8,6 +8,7 @@
 		<link id="fonts" rel="stylesheet" type="text/css" href="fonts/proximanova.css">
 		<link id="style" rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 		<script src="js/matrix.js"></script>
 		<script src="js/util.js"></script>
 		<script src="js/index.js"></script>
@@ -20,7 +21,7 @@
 		<div>
 			<div class="mb-3">
 				<label for="url">URL изображения</label>
-				<input class="form-control" id="url" onchange="onSVGChange()" type="text" name="url" value="">
+				<input class="form-control" id="url" onchange="onURLChange()" type="text" name="url" value="">
 			</div>
 			<div class="mb-3">
 				<label for="title">Заголовок новости</label>
@@ -32,7 +33,7 @@
 			</div>
 			<div class="mb-3">
 				<label for="title">Отделение</label>
-				<select class="form-control" id="site" onchange="onSVGChange()">
+				<select class="form-control" id="site" onchange="onSiteChange()">
 					<option value="POLITSTURM.COM">Главное</option>
 					<option value="AM.POLITSTURM.COM">Армения</option>
 					<option value="LV.POLITSTURM.COM">Латвия</option>

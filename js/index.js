@@ -15,12 +15,25 @@ async function ajax(uri) {
 	});
 }
 
-async function generateSVG(url, template) {
-	var uri = 'cgi-bin/generate' +
-	    '?url=' + url +
-	    '&template=' + template;
+async function ajaxImage(url) {
+	return new Promise((resolve, reject) => {
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', url);
+		xhr.responseType = 'blob';
+		xhr.onload = function() {
+			if (xhr.status !== 200) {
+				reject(xhr.status);
+				return;
+			}
 
-	return ajax(uri);
+			var reader = new FileReader();
+			reader.onloadend = function() {
+				resolve(reader.result);
+			}
+			reader.readAsDataURL(xhr.response);
+		};
+		xhr.send();
+	});
 }
 
 function getCurrentTemplate() {
@@ -39,17 +52,13 @@ DEFAULT_SITE = 'politsturm.com';
 DEFAULT_CITY = '';
 
 async function getSVG() {
-	var imgUrl = document.getElementById('url').value;
-	if (imgUrl == '') {
-		imgUrl = DEFAULT_IMG_URL;
-	}
-
 	var template = getCurrentTemplate();
 	if (template === undefined) {
 		template = DEFAULT_TEMPLATE;
 	}
 
-	return generateSVG(imgUrl, template);
+	var uri = 'data/' + template + '.svg';
+	return ajax(uri);
 }
 
 async function getFonts() {
@@ -81,7 +90,7 @@ async function injectStyle(svg, fonts) {
 	return new XMLSerializer().serializeToString(docu);
 }
 
-async function onSVGChange() {
+async function onTemplateChange() {
 	var svg = await getSVG();
 	var fonts = await getFonts();
 	svg = await injectStyle(svg, fonts);
@@ -131,6 +140,20 @@ function pointPixToPoint(pixPoint) {
 	return pointMultiply(pixPoint, pixToPoint);
 }
 
+async function onURLChange() {
+	var imgUrl = document.getElementById('url').value;
+	if (imgUrl == '') {
+		imgUrl = DEFAULT_IMG_URL;
+	}
+
+	var imageBase64 = await ajaxImage(imgUrl);
+	var imageTags = document.querySelectorAll('svg image');
+	for (var i = 0; i < imageTags.length; i++) {
+		var tag = imageTags[i];
+		tag.setAttribute('xlink:href', imageBase64);
+	}
+}
+
 function onTextChange() {
 	var text = document.getElementById('title').value;
 	if (text == '') {
@@ -158,6 +181,7 @@ function onCityChange() {
 }
 
 function updateSVG() {
+	onURLChange();
 	onTextChange();
 	onSiteChange();
 	onCityChange();
@@ -288,7 +312,7 @@ function createInput(name, title, checked) {
 	input.id = id;
 	input.value = name;
 	input.checked = checked;
-	input.onchange = onSVGChange;
+	input.onchange = onTemplateChange;
 	input.classList.add('custom-control-input');
 	elem.appendChild(input);
 
@@ -302,7 +326,7 @@ function createInput(name, title, checked) {
 }
 
 window.onload = async function() {
-	var result = await ajax('cgi-bin/templates');
+	var result = await ajax('data/templates.json');
 	var templates = JSON.parse(result);
 	var checked = true
 	for (var name in templates) {
@@ -314,5 +338,5 @@ window.onload = async function() {
 		block.appendChild(li);
 	}
 
-	onSVGChange();
+	onTemplateChange();
 }
