@@ -59,15 +59,6 @@ async function ajaxImage(url) {
 	});
 }
 
-function getCurrentTemplate() {
-	var templates = document.getElementsByName('template');
-	for(var i = 0; i < templates.length; i++) {
-		if (templates[i].checked) {
-			return templates[i].value;
-		}
-	}
-}
-
 DEFAULT_TEMPLATE = 'default'
 DEFAULT_IMG_URL = 'https://cdnb.artstation.com/p/assets/images/images/012/078/995/large/dmitry-petuhov-lenin.jpg'
 DEFAULT_TEXT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa.';
@@ -75,8 +66,8 @@ DEFAULT_SITE = 'politsturm.com';
 DEFAULT_CITY = '';
 
 async function getSVG() {
-	var template = getCurrentTemplate();
-	if (template === undefined) {
+	var template = document.getElementById('templates').value;
+	if (template == '') {
 		template = DEFAULT_TEMPLATE;
 	}
 
@@ -323,28 +314,9 @@ function download() {
 }
 
 function createInput(name, title, checked) {
-	var elem = document.createElement('div');
-	elem.classList.add('custom-control');
-	elem.classList.add('custom-radio');
-
-	var id = 'templ-' + name;
-
-	var input = document.createElement('input');
-	input.type = 'radio';
-	input.name = 'template';
-	input.id = id;
-	input.value = name;
-	input.checked = checked;
-	input.onchange = onTemplateChange;
-	input.classList.add('custom-control-input');
-	elem.appendChild(input);
-
-	var label = document.createElement('label');
-	label.setAttribute('for', id);
-	label.classList.add('custom-control-label');
-	label.innerHTML = title;
-	elem.appendChild(label);
-
+	var elem = document.createElement('option');
+	elem.value = name;
+	elem.innerHTML = title;
 	return elem;
 }
 
