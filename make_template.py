@@ -80,7 +80,7 @@ def create_foreign_object(tags, tag_id, tag_class, editable=False, width_k=1):
 
     return fo
 
-def replace_text(tree, selector, **kwargs):
+def replace_text(tree, selector, *args, **kwargs):
     root = tree.getroot()
     tags = [ text
             for text in root.findall('.//{http://www.w3.org/2000/svg}text')
@@ -89,7 +89,7 @@ def replace_text(tree, selector, **kwargs):
 
     first_text = tags[0]
     parent = get_parent(tree, first_text)
-    fo = create_foreign_object(tags, **kwargs)
+    fo = create_foreign_object(tags, *args, **kwargs)
     parent.append(fo)
 
     for tag in tags:
@@ -103,6 +103,13 @@ def getViewBox(viewBoxStr):
         'width': float(arr[2]),
         'height': float(arr[3]),
     }
+
+def get_coord(attrib, name):
+    if name not in attrib:
+        return 0
+
+    val = float(image.attrib[name])
+    return max(0, val)
 
 def main(input_svg, output_svg):
     ET.register_namespace('', 'http://www.w3.org/2000/svg')
@@ -124,10 +131,8 @@ def main(input_svg, output_svg):
 
         is_first = False
         image.attrib['width'] = str(viewBox['width'])
-        x = float(image.attrib['x'])
-        x = 0 if x < 0 else x
-        y = float(image.attrib['y'])
-        y = 0 if y < 0 else y
+        x = get_coord(image.attrib, 'x')
+        y = get_coord(image.attrib, 'y')
         width = float(image.attrib['width'])
         height = float(image.attrib['height'])
         image.attrib['x'] = str(x - width * 0.1)

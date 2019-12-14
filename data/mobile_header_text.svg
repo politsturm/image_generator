@@ -1,0 +1,49 @@
+<svg id="v2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 70px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        color: #fff;
+        fill: #fff;
+        font-family: "Proxima Nova";
+      }
+
+      .cls-2 {
+        fill: #fe0048;
+      }
+
+      .cls-3 {
+        font-size: 36px;
+      }
+
+      .cls-4 {
+        font-size: 29.351px;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <image id="Фон" width="900" height="900" xlink:href="%IMAGE%"/>
+  <image id="Слой_3" x="-283" y="-23" width="1705" height="947" xlink:href="%IMAGE%"/>
+
+  <foreignObject width="760" height="190" x="84.75" y="322.75">
+    <div class="text-container">
+      <p class="svg_text cls-1" contentEditable="true">
+        %SVG_TEXT%
+      </p>
+    </div>
+  </foreignObject>
+
+  <foreignObject width="760" height="150" x="89.125" y="550.125">
+    <div class="text-container">
+      <p class="svg_text cls-3" contentEditable="true">
+        %SVG_TEXT%
+      </p>
+    </div>
+  </foreignObject>
+
+  <text class="cls-4" transform="translate(328.577 844.339) scale(0.75)">Politsturm.com</text>
+</svg>
