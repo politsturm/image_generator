@@ -46,7 +46,7 @@ def get_style(tags):
 
     return ';'.join([ '{}:{}'.format(k, v) for (k, v) in text.attrib.items() ])
 
-def create_foreign_object(tags, tag_id, tag_class, width_k=1):
+def create_foreign_object(tags, tag_id, tag_class, editable=False, width_k=1):
     min_x = min([ float(tag.attrib['x']) for tag in tags ])
     max_x = max([ float(tag.attrib['x']) for tag in tags ])
     min_y = min([ float(tag.attrib['y']) for tag in tags ])
@@ -68,6 +68,7 @@ def create_foreign_object(tags, tag_id, tag_class, width_k=1):
     p = Element('p')
     p.attrib['style'] = get_style(tags)
     p.attrib['id'] = tag_id
+    p.attrib['contentEditable'] = "true"
     p.text = '%{}%'.format(tag_id.upper())
 
     div = Element('div')
@@ -79,7 +80,7 @@ def create_foreign_object(tags, tag_id, tag_class, width_k=1):
 
     return fo
 
-def replace_text(tree, selector, tag_id, tag_class=None, width_k=1.0):
+def replace_text(tree, selector, **kwargs):
     root = tree.getroot()
     tags = [ text
             for text in root.findall('.//{http://www.w3.org/2000/svg}text')
@@ -88,7 +89,7 @@ def replace_text(tree, selector, tag_id, tag_class=None, width_k=1.0):
 
     first_text = tags[0]
     parent = get_parent(tree, first_text)
-    fo = create_foreign_object(tags, tag_id, tag_class, width_k)
+    fo = create_foreign_object(tags, **kwargs)
     parent.append(fo)
 
     for tag in tags:
@@ -134,13 +135,16 @@ def main(input_svg, output_svg):
         image.attrib['width'] = str(width * 1.2)
         image.attrib['height'] = str(height * 1.2)
 
-    replace_text(tree, is_news_text, 'svg_text', tag_class='text-container')
+    replace_text(tree, is_news_text,
+            'svg_text', tag_class='text-container', editable=True, width_k=1)
     fo = root.find('.//foreignObject')
     fo.attrib['y'] = str(viewBox['height'] / 4)
     fo.attrib['height'] = str(viewBox['height'] / 2)
 
-    replace_text(tree, is_tag_text,  'svg_city', width_k=1.3)
-    replace_text(tree, is_site_name, 'svg_site', width_k=1.3)
+    replace_text(tree, is_tag_text,
+            'svg_city', editable=False, width_k=1.3)
+    replace_text(tree, is_site_name,
+            'svg_site', editable=False, width_k=1.3)
 
     for tag in root.findall('.//{http://www.w3.org/2000/svg}font'):
         parent = get_parent(root, tag)

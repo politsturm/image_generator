@@ -1,17 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" clip-rule="evenodd" fill-rule="evenodd" height="810" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 17571.06 9883.72" width="1440" xml:space="preserve">
- <defs>
-  <clipPath id="id0">
-    <rect height="9883.72" width="17571.06" />
-   </clipPath>
-   <linearGradient gradientUnits="userSpaceOnUse" id="id1" x1="13725.71" x2="3845.35" y1="-128.75" y2="10012.47">
-    <stop offset="0" stop-color="#210000" stop-opacity="1" />
-    <stop offset="1" stop-color="#FF002A" stop-opacity="1" />
-   </linearGradient>
- </defs>
- <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
-  <g clip-path="url(#id0)">
-   <image height="11860.463999999998" width="21085.272" x="-1757.1060000000002" y="-988.372" xlink:href="%IMAGE%" />
+  <defs>
+    <clipPath id="id0">
+      <rect height="9883.72" width="17571.06" />
+    </clipPath>
+    <linearGradient gradientUnits="userSpaceOnUse" id="id1" x1="13725.71" x2="3845.35" y1="-128.75" y2="10012.47">
+      <stop offset="0" stop-color="#210000" stop-opacity="1" />
+      <stop offset="1" stop-color="#FF002A" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
+    <g clip-path="url(#id0)">
+      <image height="11860.463999999998" width="21085.272" x="-1757.1060000000002" y="-988.372" xlink:href="%IMAGE%" />
+    </g>
+    <polygon fill="url(#id1)" fill-opacity="0.850980" points="17571.06,9883.72 -0,9883.72 -0,0 17571.06,0 " />
+    <foreignObject height="4941.86" width="11761.890000000001" x="3199.14" y="2470.93">
+      <div class="text-container">
+        <p id="svg_text" contentEditable="true" style="font-size:751.43px;color:#FEFEFE">
+          %SVG_TEXT%
+        </p>
+      </div>
+    </foreignObject>
+    <foreignObject height="610.1" width="2735.2000000000003" x="7803.55" y="879.3199999999999">
+      <div>
+        <p id="svg_city" style="font-size:305.05px;color:white">
+          %SVG_CITY%
+        </p>
+      </div>
+    </foreignObject>
+    <foreignObject height="547.28" width="3920.488" x="7303.78" y="8633.380000000001">
+      <div>
+        <p id="svg_site" style="font-size:273.64px;color:#FEFEFE">
+          %SVG_SITE%
+        </p>
+      </div>
+    </foreignObject>
   </g>
-  <polygon fill="url(#id1)" fill-opacity="0.850980" points="17571.06,9883.72 -0,9883.72 -0,0 17571.06,0 " />
-  <foreignObject height="4941.86" width="11761.890000000001" x="3199.14" y="2470.93"><div class="text-container"><p id="svg_text" style="font-size:751.43px;color:#FEFEFE">%SVG_TEXT%</p></div></foreignObject><foreignObject height="610.1" width="2735.2000000000003" x="7803.55" y="879.3199999999999"><div><p id="svg_city" style="font-size:305.05px;color:white">%SVG_CITY%</p></div></foreignObject><foreignObject height="547.28" width="3920.488" x="7303.78" y="8633.380000000001"><div><p id="svg_site" style="font-size:273.64px;color:#FEFEFE">%SVG_SITE%</p></div></foreignObject></g>
 </svg>

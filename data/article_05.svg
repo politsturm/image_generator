@@ -1,55 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" clip-rule="evenodd" fill-rule="evenodd" height="810" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 17571.06 9883.72" width="1440" xml:space="preserve">
- <defs>
-  <clipPath id="id0">
-    <rect height="9883.72" width="17571.06" />
-   </clipPath>
-    <clipPath id="id1">
-     <rect height="9883.72" width="17571.06" x="-0" y="0" />
+  <defs>
+    <clipPath id="id0">
+      <rect height="9883.72" width="17571.06" />
     </clipPath>
-   <mask id="id2">
-     <linearGradient gradientUnits="userSpaceOnUse" id="id3" x1="15853.14" x2="11708.97" y1="9689.29" y2="2367.35">
-      <stop offset="0" stop-color="white" stop-opacity="0.701961" />
-      <stop offset="0.729412" stop-color="white" stop-opacity="0.65098" />
-      <stop offset="1" stop-color="white" stop-opacity="0" />
-     </linearGradient>
-    <rect fill="url(#id3)" height="8849.65" width="16269.95" x="650.55" y="517.03" />
-   </mask>
-   <mask id="id4">
-     <linearGradient gradientUnits="userSpaceOnUse" id="id5" x1="1222.77" x2="3467.86" y1="446.29" y2="4034.7">
-      <stop offset="0" stop-color="white" stop-opacity="0.701961" />
-      <stop offset="0.729412" stop-color="white" stop-opacity="0.65098" />
-      <stop offset="1" stop-color="white" stop-opacity="0" />
-     </linearGradient>
-    <rect fill="url(#id5)" height="8849.65" width="16269.95" x="650.55" y="517.03" />
-   </mask>
- </defs>
- <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
-  <g clip-path="url(#id0)">
-   <image clip-path="url(#id1)" height="14054.1" width="21085.272" x="-1757.1060000000002" y="-1171.175" xlink:href="%IMAGE%" />
+    <clipPath id="id1">
+      <rect height="9883.72" width="17571.06" x="-0" y="0" />
+    </clipPath>
+    <mask id="id2">
+      <linearGradient gradientUnits="userSpaceOnUse" id="id3" x1="15853.14" x2="11708.97" y1="9689.29" y2="2367.35">
+        <stop offset="0" stop-color="white" stop-opacity="0.701961" />
+        <stop offset="0.729412" stop-color="white" stop-opacity="0.65098" />
+        <stop offset="1" stop-color="white" stop-opacity="0" />
+      </linearGradient>
+      <rect fill="url(#id3)" height="8849.65" width="16269.95" x="650.55" y="517.03" />
+    </mask>
+    <mask id="id4">
+      <linearGradient gradientUnits="userSpaceOnUse" id="id5" x1="1222.77" x2="3467.86" y1="446.29" y2="4034.7">
+        <stop offset="0" stop-color="white" stop-opacity="0.701961" />
+        <stop offset="0.729412" stop-color="white" stop-opacity="0.65098" />
+        <stop offset="1" stop-color="white" stop-opacity="0" />
+      </linearGradient>
+      <rect fill="url(#id5)" height="8849.65" width="16269.95" x="650.55" y="517.03" />
+    </mask>
+  </defs>
+  <g id="&#1057;&#1083;&#1086;&#1081;_x0020_1">
+    <g clip-path="url(#id0)">
+      <image clip-path="url(#id1)" height="14054.1" width="21085.272" x="-1757.1060000000002" y="-1171.175" xlink:href="%IMAGE%" />
+    </g>
+    <path d="M1172.84 520.49l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83z" fill="#F30017" fill-opacity="0.850980" />
+    <path d="M1172.84 520.49l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83z" fill="#A80011" mask="url(#id2)" />
+    <path d="M16398.21 9363.23l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83z" fill="#C20013" mask="url(#id4)" />
+    <foreignObject height="4941.86" width="11000" x="3199.14" y="2470.93">
+      <div class="text-container">
+        <p id="svg_text" contentEditable="true" style="font-size:751.43px;color:#FEFEFE">
+          %SVG_TEXT%
+        </p>
+      </div>
+    </foreignObject>
+    <foreignObject height="610.1" width="2735.187" x="7803.55" y="878.48">
+      <div>
+        <p id="svg_city" style="font-size:305.05px;color:white">
+          %SVG_CITY%
+        </p>
+      </div>
+    </foreignObject>
+    <foreignObject height="547.28" width="3920.500999999999" x="7303.77" y="8633.380000000001">
+      <div>
+        <p id="svg_site" style="font-size:273.64px;color:#FEFEFE">
+          %SVG_SITE%
+        </p>
+      </div>
+    </foreignObject>
   </g>
-  <path d="M1172.84 520.49l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83z" fill="#F30017" fill-opacity="0.850980" />
-  <path d="M1172.84 520.49l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83z" fill="#A80011" mask="url(#id2)" />
-  <path d="M16398.21 9363.23l-15225.37 0c-285.36,0 -518.83,-233.47 -518.83,-518.83l0 -7805.07c0,-285.36 233.47,-518.83 518.83,-518.83l15225.37 0c285.36,0 518.83,233.47 518.83,518.83l0 7805.07c0,285.36 -233.47,518.83 -518.83,518.83z" fill="#C20013" mask="url(#id4)" />
-  <foreignObject height="4941.86" width="11000" x="3199.14" y="2470.93">
-    <div class="text-container">
-      <p id="svg_text" style="font-size:751.43px;color:#FEFEFE">
-        %SVG_TEXT%
-      </p>
-    </div>
-  </foreignObject>
-  <foreignObject height="610.1" width="2735.187" x="7803.55" y="878.48">
-    <div>
-      <p id="svg_city" style="font-size:305.05px;color:white">
-        %SVG_CITY%
-      </p>
-    </div>
-  </foreignObject>
-  <foreignObject height="547.28" width="3920.500999999999" x="7303.77" y="8633.380000000001">
-    <div>
-      <p id="svg_site" style="font-size:273.64px;color:#FEFEFE">
-        %SVG_SITE%
-      </p>
-    </div>
-  </foreignObject>
-</g>
 </svg>
