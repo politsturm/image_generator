@@ -173,17 +173,22 @@ async function onURLChange() {
 	}
 }
 
+function getTextElements() {
+	var textElems = document.getElementsByClassName('svg_text');
+	if (textElems.length !== 0) {
+		return textElems;
+	}
+
+	return [ document.getElementById('svg_text') ];
+}
+
 function onTextChange() {
 	var text = document.getElementById('title').value;
 	if (text == '') {
 		text = DEFAULT_TEXT;
 	}
 
-	var textElems = document.getElementsByClassName('svg_text');
-	if (textElems.length === 0) {
-		var textElems = [ document.getElementById('svg_text') ];
-	}
-
+	var textElems = getTextElements();
 	for (var i = 0; i < textElems.length; i++) {
 		var elem = textElems[i];
 		elem.innerHTML = text;
@@ -326,7 +331,7 @@ function download() {
 			.replace('image/jpeg',
 			'image/octet-stream');
 
-		var text = document.getElementById('title').value;
+		var text = getTextElements()[0].textContent;
 		triggerDownload(text, imgURI);
 	};
 
