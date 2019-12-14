@@ -207,6 +207,11 @@ document.addEventListener('mouseup', function() {
 
 document.addEventListener('mousemove', function(e) {
 	e.preventDefault();
+
+	if (!isShiftPressed) {
+		return;
+	}
+
 	if (isDown) {
 		var cursorPoint = pointPixToPoint(getClientPoint(e));
 		var newPoint = pointsSum(cursorPoint, offset);
