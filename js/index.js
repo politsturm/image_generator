@@ -131,6 +131,11 @@ async function onTemplateChange() {
 		isHover = false;
 	}, true);
 
+	var svgElem = document.querySelector('svg');
+	var canvasElem = document.querySelector('canvas');
+	canvasElem.setAttribute('width', svgElem.getAttribute('width'));
+	canvasElem.setAttribute('height', svgElem.getAttribute('height'));
+
 	updateSVG();
 }
 
