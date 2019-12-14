@@ -173,7 +173,17 @@ function onTextChange() {
 	if (text == '') {
 		text = DEFAULT_TEXT;
 	}
-	document.getElementById('svg_text').innerHTML = text;
+
+	var textElems = document.getElementsByClassName('svg_text');
+	if (textElems.length === 0) {
+		var textElems = [ document.getElementById('svg_text') ];
+	}
+
+	for (var i = 0; i < textElems.length; i++) {
+		var elem = textElems[i];
+		elem.innerHTML = text;
+		elem.setAttribute('contentEditable', 'true');
+	}
 }
 
 function onSiteChange() {
