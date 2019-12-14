@@ -294,7 +294,7 @@ function triggerDownload(name, imgURI) {
 	});
 
 	var a = document.createElement('a');
-	var filename = name.trim().replace(/ /g, '_') + '.jpg'
+	var filename = name.trim().replace(/ /g, '_') + '.png'
 	a.setAttribute('download', filename);
 	a.setAttribute('href', imgURI);
 	a.setAttribute('target', '_blank');
@@ -327,8 +327,8 @@ function download() {
 		DOMURL.revokeObjectURL(url);
 
 		var imgURI = canvas
-			.toDataURL('image/jpeg', 0.95)
-			.replace('image/jpeg',
+			.toDataURL('image/png')
+			.replace('image/png',
 			'image/octet-stream');
 
 		var text = getTextElements()[0].textContent;
