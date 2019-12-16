@@ -1,49 +1,48 @@
 <svg id="v2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="900" viewBox="0 0 900 900">
   <defs>
     <style>
-      .cls-1 {
-        font-size: 70px;
-        font-weight: 700;
+      .svg_header {
+        line-height: 69px !important;
+        font-size: 70px !important;
+        font-weight: 700 !important;
       }
 
-      .cls-1, .cls-3, .cls-4 {
+      .svg_text {
         color: #fff;
         fill: #fff;
         font-family: "Proxima Nova";
-      }
-
-      .cls-2 {
-        fill: #fe0048;
-      }
-
-      .cls-3 {
         font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 0.3px;
       }
 
-      .cls-4 {
-        font-size: 29.351px;
+      .hostname {
+        font-family: "Proxima Nova Rg";
+        font-size: 22pt;
         text-transform: uppercase;
+        letter-spacing: 6px;
+        fill: #fff;
       }
     </style>
   </defs>
   <image x="-283" y="-23" width="1705" height="947" xlink:href="%IMAGE%"/>
   <polygon fill="#354b62" fill-opacity="0.8" points="0,0 0,900 900,900 900,0" />
 
-  <foreignObject width="760" height="190" x="84.75" y="322.75">
+  <foreignObject width="760" height="400" x="84.75" y="185">
     <div class="text-container">
-      <p class="svg_text cls-1" contentEditable="true">
+      <p class="svg_text svg_header" contentEditable="true">
         %SVG_TEXT%
       </p>
     </div>
   </foreignObject>
 
-  <foreignObject width="760" height="150" x="89.125" y="550.125">
+  <foreignObject width="760" height="150" x="89.125" y="510">
     <div class="text-container">
-      <p class="svg_text cls-3" contentEditable="true">
+      <p class="svg_text" contentEditable="true">
         %SVG_TEXT%
       </p>
     </div>
   </foreignObject>
 
-  <text class="cls-4" transform="translate(328.577 844.339) scale(0.75)">Politsturm.com</text>
+  <text class="hostname" transform="translate(328.577 844.339) scale(0.75)">Politsturm.com</text>
 </svg>
