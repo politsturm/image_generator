@@ -115,7 +115,16 @@ async function onTemplateChange() {
 	svgBlock.innerHTML = svg;
 
 	var images = document.getElementsByTagName('image')
-	image = images[images.length - 1];
+
+	for (var i = 0; i < images.length; i++) {
+		var isFixed = images[i].getAttribute('fixedposition');
+		if (isFixed == "true") {
+			continue;
+		}
+
+		image = images[i];
+	}
+
 	svgBlock.addEventListener('mousedown', function(e) {
 		isDown = true;
 		var imagePoint = getAttrPoint(image);
@@ -169,6 +178,10 @@ async function onURLChange() {
 	var imageTags = document.querySelectorAll('svg image');
 	for (var i = 0; i < imageTags.length; i++) {
 		var tag = imageTags[i];
+		var isFixed = tag.getAttribute('fixedimage');
+		if (isFixed == "true") {
+			continue;
+		}
 		tag.setAttribute('xlink:href', imageBase64);
 	}
 }
