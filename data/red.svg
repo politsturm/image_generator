@@ -20,11 +20,13 @@
       }
 
       .svg_city_blue {
-        font-family: "Proxima Nova";
+        font-family: "Proxima Nova Rg";
+        font-weight: bold;
         font-size: 30pt;
         letter-spacing: 0.06em !important;
         color: white;
       }
+
       #tag {
         font-weight: bold;
         font-size: 30pt;
@@ -624,12 +626,12 @@ Ena5uYzqhXO7w+PwLOnLIV43nvZslz4o2/8TYADMcAnKtnSpjAAAAABJRU5ErkJggg==
     </div>
   </foreignObject>
 
+  <text id="tag" x="84" y="108">#</text>
   <foreignObject width="400" height="100" x="110" y="67">
     <div class="city-container">
-      <p withouttag="true" contentEditable="true" id="svg_city" class="svg_city_blue">
-        %SVG_SITE%
+      <p withouttag="true" contentEditable="true" class="svg_city_blue">
+      SNmobile
       </p>
     </div>
   </foreignObject>
-  <text id="tag" x="84" y="108">#</text>
 </svg>
