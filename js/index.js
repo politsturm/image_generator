@@ -195,7 +195,7 @@ function getTextElements() {
 	return [ document.getElementById('svg_text') ];
 }
 
-function onTextChange() {
+function onTitleChange() {
 	var text = document.getElementById('title').value;
 	if (text == '') {
 		text = DEFAULT_TEXT;
@@ -274,7 +274,7 @@ function onCityChange() {
 
 function updateSVG() {
 	onURLChange();
-	onTextChange();
+	onTitleChange();
 	onSiteChange();
 	onCityChange();
 }
