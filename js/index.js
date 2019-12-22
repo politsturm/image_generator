@@ -221,6 +221,18 @@ function onTitleChange() {
 	}
 }
 
+function onSubtitleChange() {
+	var text = document.getElementById('subtitle').value;
+	if (text == '') {
+		text = DEFAULT_TEXT;
+	}
+
+	var elem = document.getElementById('svg_subtitle');
+	if (elem) {
+		elem.innerHTML = text;
+	}
+}
+
 function onAccentChange() {
 	var text = document.getElementById('title').value;
 	var selectedWord = document.getElementById('accent').value;
@@ -275,6 +287,7 @@ function onCityChange() {
 function updateSVG() {
 	onURLChange();
 	onTitleChange();
+	onSubtitleChange();
 	onSiteChange();
 	onCityChange();
 }

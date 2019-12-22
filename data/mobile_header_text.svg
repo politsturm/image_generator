@@ -1,13 +1,17 @@
 <svg id="v2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="900" viewBox="0 0 900 900">
   <defs>
     <style>
-      .svg_header {
-        line-height: 69px !important;
-        font-size: 70px !important;
-        font-weight: 700 !important;
+      #svg_text {
+        color: #fff;
+        fill: #fff;
+        font-family: "Proxima Nova";
+        letter-spacing: 0.3px;
+        line-height: 69px;
+        font-size: 70px;
+        font-weight: 700;
       }
 
-      .svg_text {
+      #svg_subtitle {
         color: #fff;
         fill: #fff;
         font-family: "Proxima Nova";
@@ -30,7 +34,7 @@
 
   <foreignObject width="760" height="400" x="84.75" y="185">
     <div class="text-container">
-      <p class="svg_text svg_header" contentEditable="true">
+      <p id="svg_text" contentEditable="true">
         %SVG_TEXT%
       </p>
     </div>
@@ -38,8 +42,8 @@
 
   <foreignObject width="760" height="150" x="89.125" y="510">
     <div class="text-container">
-      <p class="svg_text" contentEditable="true">
-        %SVG_TEXT%
+      <p id="svg_subtitle" contentEditable="true">
+        %SVG_SUBTITLE%
       </p>
     </div>
   </foreignObject>
