@@ -207,6 +207,40 @@ function onTextChange() {
 		elem.innerHTML = text;
 		elem.setAttribute('contentEditable', 'true');
 	}
+
+	var words = text.split(' ');
+	words.unshift('Без выделения')
+
+	var accentList = document.getElementById('accent');
+	accentList.innerHTML = '';
+	for (var i = 0; i < words.length; i++) {
+		var word = words[i];
+		var option = document.createElement('option');
+		option.appendChild(document.createTextNode(word));
+		accentList.appendChild(option);
+	}
+}
+
+function onAccentChange() {
+	var text = document.getElementById('title').value;
+	var selectedWord = document.getElementById('accent').value;
+	var words = text.split(' ');
+	var newText = '';
+	for (var i = 0; i < words.length; i++) {
+		var word = words[i];
+		if (word == selectedWord) {
+			word = '<font color="#fe0048">' + word + '</font>'
+		}
+
+		newText += word + ' ';
+	}
+
+	var textElems = getTextElements();
+	for (var i = 0; i < textElems.length; i++) {
+		var elem = textElems[i];
+		elem.innerHTML = newText;
+		elem.setAttribute('contentEditable', 'true');
+	}
 }
 
 function onSiteChange() {
