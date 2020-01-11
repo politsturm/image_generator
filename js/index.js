@@ -76,9 +76,14 @@ async function getSVG() {
 }
 
 async function getFonts() {
-	var fontsTag = document.getElementById('fonts');
-	var uri = fontsTag.href;
-	return ajax(uri);
+	var fontsTags = document.getElementsByClassName('fonts');
+	var fonts = '';
+	for (const fontsTag of fontsTags) {
+		var uri = fontsTag.href;
+		fonts += await ajax(uri);
+	}
+
+	return fonts;
 }
 
 async function getStyle() {
