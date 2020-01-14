@@ -1,28 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="900" viewBox="0 0 900 900">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 600 600">
   <defs>
     <style>
       .svg_text {
         font-family: "Proxima Nova";
-        font-size: 75px;
+        font-size: 50px;
         font-weight: 700;
-        line-height: 80px;
+        line-height: 55px;
         color: #fff;
         fill: #fff;
       }
 
       .hostname {
         font-family: "Proxima Nova Rg";
-        font-size: 22pt;
+        font-size: 17px;
         text-transform: uppercase;
-        letter-spacing: 6px;
+        letter-spacing: 0.1em;
         fill: #fff;
+      }
+
+      #gradient_rect {
+        opacity: 0.9;
+        fill: url(#gradient);
       }
     </style>
   </defs>
-  <image x="-283" y="-23" width="1705" height="947" xlink:href="%IMAGE%"/>
-  <polygon fill="#354b62" fill-opacity="0.8" points="0,0 0,900 900,900 900,0" />
+  <image x="0" y="0" width="600" height="600" xlink:href="%IMAGE%"/>
 
-  <foreignObject width="800" height="600" x="70" y="175">
+  <linearGradient id="gradient" x1="0" y1="600" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#0c0f13"/>
+    <stop offset="1" stop-color="#243b55"/>
+  </linearGradient>
+
+  <rect id="gradient_rect" x="0" y="0" width="600" height="600"/>
+
+  <foreignObject width="520" height="500" x="40" y="57">
     <div class="text-container">
       <p contentEditable="true" class="svg_text">
         %SVG_TEXT%
@@ -30,5 +41,5 @@
     </div>
   </foreignObject>
 
-  <text class="hostname" transform="translate(328.577 844.339) scale(0.75)">Politsturm.com</text>
+  <text class="hostname" x="216.77" y="553.27">Politsturm.com</text>
 </svg>
