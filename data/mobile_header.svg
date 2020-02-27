@@ -24,7 +24,7 @@
       }
     </style>
   </defs>
-  <image x="0" y="0" width="600" height="600" xlink:href="%IMAGE%"/>
+  <image x="0" y="0" height="600" xlink:href="%IMAGE%"/>
 
   <linearGradient id="gradient" x1="0" y1="600" x2="600" y2="0" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="#0c0f13"/>
