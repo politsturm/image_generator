@@ -34,7 +34,7 @@
 
   <foreignObject width="760" height="400" x="84.75" y="185">
     <div class="text-container">
-      <p id="svg_text" contentEditable="true">
+      <p id="svg_text">
         %SVG_TEXT%
       </p>
     </div>
@@ -42,7 +42,7 @@
 
   <foreignObject width="760" height="150" x="89.125" y="510">
     <div class="text-container">
-      <p id="svg_subtitle" contentEditable="true">
+      <p id="svg_subtitle">
         %SVG_SUBTITLE%
       </p>
     </div>

@@ -32,7 +32,7 @@
     <path d="M662.18 971.41l1639.21 0c114.44,0 208.08,93.64 208.08,208.08l0 1639.21c0,114.44 -93.64,208.08 -208.08,208.08l-1639.21 0c-114.44,0 -208.08,-93.64 -208.08,-208.08l0 -1639.21c0,-114.44 93.64,-208.08 208.08,-208.08z" fill="#C0002D" mask="url(#id4)" />
     <foreignObject height="1999.09" width="3966.4700000000003" x="2963.58" y="999.545">
       <div class="text-container">
-        <p id="svg_text" contentEditable="true" style="font-size:303.97px;color:#FEFEFE">
+        <p id="svg_text" style="font-size:303.97px;color:#FEFEFE">
           %SVG_TEXT%
         </p>
       </div>

@@ -210,7 +210,6 @@ function onTitleChange() {
 	for (var i = 0; i < textElems.length; i++) {
 		var elem = textElems[i];
 		elem.innerHTML = text;
-		elem.setAttribute('contentEditable', 'true');
 	}
 
 	var words = text.split(' ');
@@ -256,7 +255,6 @@ function onAccentChange() {
 	for (var i = 0; i < textElems.length; i++) {
 		var elem = textElems[i];
 		elem.innerHTML = newText;
-		elem.setAttribute('contentEditable', 'true');
 	}
 }
 

@@ -35,7 +35,7 @@
 
   <foreignObject width="520" height="500" x="40" y="57">
     <div class="text-container">
-      <p contentEditable="true" class="svg_text">
+      <p class="svg_text">
         %SVG_TEXT%
       </p>
     </div>

@@ -68,7 +68,6 @@ def create_foreign_object(tags, tag_id, tag_class, editable=False, width_k=1):
     p = Element('p')
     p.attrib['style'] = get_style(tags)
     p.attrib['id'] = tag_id
-    p.attrib['contentEditable'] = "true"
     p.text = '%{}%'.format(tag_id.upper())
 
     div = Element('div')

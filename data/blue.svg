@@ -893,7 +893,7 @@ L5AjGnLQfbbdnpesADmAHECOZNv2/wIMAI6CEtlOEEzPAAAAAElFTkSuQmCC
        width="1080" />
   <foreignObject width="950" height="500" x="60" y="665">
     <div class="text-container" style="text-alight: center;">
-      <p contentEditable="true" class="svg_text">
+      <p class="svg_text">
         %SVG_TEXT%
       </p>
     </div>

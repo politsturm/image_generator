@@ -19,7 +19,7 @@
     <path d="M3171.38 0l6950.05 0 0 5693.3 -6123.46 0 -649.34 -642.72c-117.75,-116.55 -177.24,-259.13 -177.24,-424.82l0 -4625.77z" fill="url(#id2)" />
     <foreignObject height="2846.65" width="5885.66" x="3838.34" y="1423.325">
       <div class="text-container">
-        <p id="svg_text" contentEditable="true" style="font-size:432.85px;color:#FEFEFE">
+        <p id="svg_text" style="font-size:432.85px;color:#FEFEFE">
           %SVG_TEXT%
         </p>
       </div>

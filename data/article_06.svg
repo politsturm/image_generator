@@ -28,7 +28,7 @@
     <polygon fill="#980015" mask="url(#id3)" points="-0,1533.2 -0,0 883.58,0 " />
     <foreignObject height="1252.975" width="2590.62" x="208.21" y="626.4875">
       <div class="text-container">
-        <p id="svg_text" contentEditable="true" style="font-size:190.52px;color:#FEFEFE">
+        <p id="svg_text" style="font-size:190.52px;color:#FEFEFE">
           %SVG_TEXT%
         </p>
       </div>
