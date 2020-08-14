@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 70px;
+        font-family: ProximaNova-Bold, Proxima Nova;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-3, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #fe0048;
+      }
+
+      .cls-3 {
+        font-size: 36px;
+      }
+
+      .cls-3, .cls-5 {
+        font-family: ProximaNova-Regular, Proxima Nova;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-5 {
+        font-size: 22px;
+        letter-spacing: 0.1em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0.1em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0.09em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0.1em;
+      }
+
+      .svg_text {
+        font-family: "Proxima Nova Rg";
+        font-size: 70px;
+        font-weight: bold;
+        line-height: 1;
+        color: #fff;
+        fill: #fff;
+        letter-spacing: 1.2px;
+      }
+
+      #svg_subtitle {
+        color: #fff;
+        fill: #fff;
+        font-family: "Proxima Nova Rg";
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 0.3px;
+      }
+
+      .hostname {
+        font-family: "Proxima Nova Rg";
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="a">
+      <stop offset="0" stop-color="#0d1116" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#1e3a4e" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient gradientTransform="matrix(1.34885 0 0 1.46561 1202.496 229.72)" gradientUnits="userSpaceOnUse" y2="-156.74" x2="-224.262" y1="457.339" x1="-891.497" id="b" xlink:href="#a"/>
+  </defs>
+
+  <image x="0" y="0" width="900" height="900" xlink:href="%IMAGE%"/>
+  <path fill="url(#b)" d="M0 0h900v900H0z"/>
+
+  <foreignObject width="747" height="211" x="84" y="274">
+    <div class="text-container">
+      <p class="svg_text">
+        %SVG_TEXT%
+      </p>
+    </div>
+  </foreignObject>
+
+  <foreignObject width="747" height="211" x="84" y="500">
+    <div class="text-container">
+      <p id="svg_subtitle">
+        %SVG_SUBTITLE%
+      </p>
+    </div>
+  </foreignObject>
+
+  <text class="hostname" x="343.58" y="844.34">Politsturm.com</text>
+
+</svg>
